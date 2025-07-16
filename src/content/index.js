@@ -1,25 +1,54 @@
 import { extractMainQuestion } from "./core/extractHead.js";
 import { detectType } from "./core/detectType.js";
 import { handlers } from "./core/handlers/index.js";
-import { cleanQuestion, log } from "./core/utils.js";
+import {
+  cleanQuestion,
+  getStorage,
+  log,
+  saveToStorage,
+  sendMessage,
+} from "./core/utils.js";
 
-console.clear();
-const data = { lastIndex: 0, observers: [] };
+(() => {
+  const isLMS =
+    location.hostname === "lms.ictu.edu.vn" || location.href.startsWith("file");
+  if (!isLMS) return;
 
-setInterval(() => {
-  const { type, el } = detectType();
-  if (!el) return;
+  console.clear();
+  const session = { lastIndex: 0, observers: [], restore: [], test: [] };
 
-  const question = extractMainQuestion();
-  if (question.no === data.lastIndex) return;
+  window.addEventListener("message", async ({ source, data }) => {
+    if (source !== window) return;
+    if (data?.source === "page-script") {
+      const question = data.payload[0];
+      session.test[question.no - 1] = question;
+      await saveToStorage("test", session.test);
+    }
+  });
 
-  data.observers.forEach((obs) => obs.disconnect());
-  data.observers = [];
+  setInterval(async () => {
+    const { type, el } = detectType();
+    if (!el) return;
 
-  question.type = type;
-  handlers[type]?.(el, question, data.observers);
-  cleanQuestion(question);
-  log(question);
+    session.restore = await getStorage("restore");
 
-  data.lastIndex = question.no;
-}, 1000);
+    const question = extractMainQuestion();
+    if (question.no === session.lastIndex) return;
+
+    session.observers.forEach((obs) => obs.disconnect());
+    session.observers = [];
+
+    question.type = type;
+    handlers[type]?.({
+      el,
+      question,
+      observerManager: session.observers,
+      ...session,
+    });
+    cleanQuestion(question);
+    sendMessage(question);
+    log(question);
+
+    session.lastIndex = question.no;
+  }, 1000);
+})();

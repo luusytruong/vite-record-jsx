@@ -6,10 +6,11 @@ export function extractMainQuestion() {
     no: extractNumber(getText($("fieldset legend"))),
     text: normalize(getText($("fieldset div"))),
     img_src: $("fieldset img")?.src || "",
-    options: [],
     sub_questions: [],
-    drag_map: [],
     input_answers: [],
+    candidates: [],
+    drag_map: [],
+    options: [],
   };
 }
 

@@ -1,6 +1,7 @@
 import MainLayout from "@/components/layouts/MainLayout";
 import Home from "@/pages/Home";
 import Settings from "@/pages/Settings";
+import Upload from "@/pages/Upload";
 
 export const routes = [
   {
@@ -9,6 +10,7 @@ export const routes = [
     children: [
       { path: "/", element: <Home /> },
       { path: "/settings", element: <Settings /> },
+      { path: "/upload", element: <Upload /> },
     ],
   },
 ];

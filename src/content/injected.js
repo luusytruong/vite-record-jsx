@@ -3,14 +3,23 @@
     location.hostname === "lms.ictu.edu.vn" || location.href.startsWith("file");
   if (!isLMS) return;
 
-  const scripts = ["dist/content/index.js"];
+  const scripts = ["src/content/index.js"];
   scripts.forEach((src) => {
     const script = document.createElement("script");
     script.src = chrome.runtime.getURL(src);
     script.type = "module";
-    script.onload = () => script.remove();
+    script.onload = () => {
+      script.remove();
+      restored();
+      setInterval(restored, 2000);
+    };
     document.head.appendChild(script);
   });
+
+  const restored = async () => {
+    const restore = await getStorage("restore");
+    if (restore) sendMessage(restore);
+  };
 
   window.addEventListener("contextmenu", (e) => e.stopPropagation(), true);
 
@@ -21,6 +30,19 @@
     }
   });
 
+  const log = (...args) =>
+    true &&
+    console.log(
+      "%cR%cE%cC%cO%cR%cD",
+      "color: #03FFFF; font-weight: bold;",
+      "color: #56FFAA; font-weight: bold;",
+      "color: #AAFF55; font-weight: bold;",
+      "color: #FFFF00; font-weight: bold;",
+      "color: #FF8080; font-weight: bold;",
+      "color: #FF00FF; font-weight: bold;",
+      ...args
+    );
+
   const test = [];
 
   window.addEventListener("message", async ({ source, data }) => {
@@ -28,22 +50,37 @@
     if (data?.source === "page-script") {
       const question = data.payload[0];
       test[question.no - 1] = question;
-      console.log(test);
+      log(test);
       await setStorage("test", test);
     }
   });
 
+  function sendMessage(...args) {
+    window.postMessage(
+      {
+        source: "content-script",
+        payload: args,
+      },
+      "*"
+    );
+  }
+
   async function setStorage(key, data) {
     if (!chrome?.storage?.local) return false;
     try {
-      await new Promise((res, rej) =>
-        chrome.storage.local.set({ [key]: data }, (err) =>
-          err ? rej(err) : res()
-        )
-      );
+      await chrome.storage.local.set({ [key]: data });
       return true;
     } catch {
       return false;
+    }
+  }
+  async function getStorage(key) {
+    if (!chrome?.storage?.local) return;
+    try {
+      const result = await chrome.storage.local.get(key);
+      return result[key];
+    } catch {
+      return null;
     }
   }
 })();

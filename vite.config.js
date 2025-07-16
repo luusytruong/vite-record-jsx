@@ -5,6 +5,7 @@ import tailwindcss from "@tailwindcss/vite";
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: "/dist",
   plugins: [react(), tailwindcss()],
   resolve: {
     alias: {
@@ -22,12 +23,10 @@ export default defineConfig({
 
         // Giữ lại điểm vào cho content script nếu đây là một phần của tiện ích mở rộng
         content: resolve(__dirname, "src/content/index.js"),
-        injected: resolve(__dirname, "src/content/injected.js"),
       },
       output: {
         entryFileNames: ({ name }) => {
-          if (name === "content") return "content/index.js";
-          if (name === "injected") return "content/injected.js";
+          if (name === "content") return "content/injected.js";
           // Các file JS khác (ví dụ: từ main.html) sẽ vào thư mục assets
           return `assets/[name]-[hash].js`;
         },

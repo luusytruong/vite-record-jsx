@@ -1,4 +1,4 @@
-export const questions = [
+[
   {
     no: "1",
     text: "Theo Garlan và Shaw, thiết kế kiến trúc xác định điều gì?",
@@ -214,4 +214,186 @@ export const questions = [
     ],
     type: "drag-drop-2",
   },
-];
+]`
+Question 17 //đây là drag-drop-2
+
+Kéo thả đáp án thích hợp vào chỗ trống
+
+Các thành phần độc lập
+
+Phân tách thành 3 thành phần Model - View - Controller
+
+
+
+Event-Driven
+
+*Thành phần giao tiếp bằng phát/bắt sự kiện
+
+Layered
+
+*Phân tách theo tầng (presentation, business, data)
+
+Client-Server
+
+*Server trung tâm phục vụ nhiều client
+
+Microservices
+
+*Dịch vụ nhỏ, triển khai độc lập
+
+
+
+Question 18 //đây là grouping-2
+
+Kéo thả đáp án thích hợp vào chỗ trống
+
+Các thành phần độc lập
+
+Phân tách thành 3 thành phần Model - View - Controller
+
+
+
+Event-Driven
+
+*Phân tách theo tầng (presentation, business, data)
+
+*Thành phần giao tiếp bằng phát/bắt sự kiện
+
+Layered
+
+*Phân tách theo tầng (presentation, business, data)
+
+*Phân tách theo tầng (presentation, business, data)
+
+*Phân tách theo tầng (presentation, business, data)
+
+Client-Server
+
+*Server trung tâm phục vụ nhiều client
+
+Microservices
+
+*Dịch vụ nhỏ, triển khai độc lập
+
+
+
+Question 19 // đây là group-radio
+
+Các phát biểu sau Đúng hay Sai
+
+1)Thiết kế kiến trúc phần mềm là thiết kế chi tiết
+
+*A. Sai
+
+B. Đúng
+
+2)Thiết kế kiến trúc dựa trên SRS
+
+*A. Đúng
+
+B. Sai
+
+3)Pipe-and-Filter là một phong cách kiến trúc
+
+*A. Đúng
+
+B. Sai
+
+4)Kiến trúc phần mềm là phong cách kiến trúc
+
+A. Đúng
+
+*B. Sai
+
+Question 12 //đây là radio
+
+Các thành phần chính của kiến trúc phần mềm bao gồm gì?
+
+A. Classes, Methods, Packages
+
+*B. Components, Connectors, Configurations
+
+C. Requirements, Test Cases, Use Cases
+
+D. Algorithms, Data Structures, Interfaces
+
+
+
+Question 13 //đây là checkbox
+
+Nhiệm vụ chính của Kiến trúc sư phần mềm gồm: (Chọn 3)
+
+*A. Hướng dẫn đội phát triển
+
+B. Kiểm thử phần mềm
+
+*C. Lựa chọn công nghệ
+
+*D. Phân tích yêu cầu
+
+
+radio -> 1 dấu *, checkbox hơn 1 dấu *, group-radio-> có sub_question dạng 1), 2), ...
+drag-drop-2 chỉ có duy nhất 1 đáp án, vậy nên key sẽ là answer, còn grouping2 như cái loại, có nhiều đáp án, key sẽ là mảng answers
+
+nhận biết dòng tiếp theo câu hỏi: dòng bắt đầu bằng "Question"
+dòng câu hỏi text: nằm dưới dòng "Question"
+có dạng *A. (1 => radio, 2 trở lên => checkbox)
+có dạng *xxxx( là drag-drop2 hoặc grouping2 hướng dẫn ở dưới nè)
+có dạng số + ) ( là dạng group-radio)
+
+- nhận biết drag-drop-2
+Question 18 // <- dấu hiệu nhận biết sau dòng này là 1 câu hỏi
+Kéo thả đáp án thích hợp vào chỗ trống // <- đây chính là text của câu hỏi
+Các thành phần độc lập // <- đây chính là 1 trong các candidates
+Phân tách thành 3 thành phần Model - View - Controller // <- đây chính là 1 trong các candidates
+
+Event-Driven // <- đây là 1 text trong 1 đối tượng của drag_map, dấu hiệu nhận biết là line + 1 bắt đầu bằng dấu *
+*Thành phần giao tiếp bằng phát/bắt sự kiện // <- đây chính là answer
+Layered
+*Phân tách theo tầng (presentation, business, data)
+Client-Server
+*Server trung tâm phục vụ nhiều client
+Microservices
+*Dịch vụ nhỏ, triển khai độc lập
+
+
+- nhận biết grouping-2
+Question 18 //đây là grouping-2
+
+Kéo thả đáp án thích hợp vào chỗ trống
+
+Các thành phần độc lập
+
+Phân tách thành 3 thành phần Model - View - Controller
+
+
+
+Event-Driven <- đây là text của 1 đối tượng, dấu hiệu nhận biết là line + 1 bắt đầu bằng dấu *
+
+*Phân tách theo tầng (presentation, business, data) <- đây là 1 câu trả lời của grouping-2, line + 1 bắt đầu là * => 2* kề nhau, không phải *A, *B, ... thì => là grouping-2
+
+*Thành phần giao tiếp bằng phát/bắt sự kiện
+
+Layered
+
+*Phân tách theo tầng (presentation, business, data)
+
+*Phân tách theo tầng (presentation, business, data)
+
+*Phân tách theo tầng (presentation, business, data)
+
+Client-Server
+
+*Server trung tâm phục vụ nhiều client
+
+Microservices
+
+*Dịch vụ nhỏ, triển khai độc lập
+
+lưu ý:
+- radio, checkbox: 1 dấu *, dạng "*[chữ cái in hoa]."
+- drag-drop-2, grouping-2: 1 dấu *, không giống dạng "*[chữ cái in hoa]."
+tôi cần một mã nguồn js có thế phân tích từ text sang mã JSON 1 cách chính xác.
+code không thể dùng các câu để nhận diện loại câu hỏi, chúng luôn thay đổi.
+nếu đã đọc đến đây, hãy chào tôi! tôi là truongdeptrai!
+`;

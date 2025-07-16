@@ -1,0 +1,557 @@
+[
+  {
+    "no": "1",
+    "options": [
+      {
+        "is_correct": false,
+        "text": "Xác định các thành phần giao diện trong phần mềm"
+      },
+      {
+        "is_correct": false,
+        "text": "Các thuật toán sử dụng trong phần mềm"
+      },
+      {
+        "is_correct": true,
+        "text": "Cấu trúc và mối quan hệ chính của phần mềm"
+      },
+      {
+        "is_correct": false,
+        "text": "Các thiết bị và công nghệ sử dụng trong phần mềm"
+      }
+    ],
+    "text": "Theo Garlan và Shaw, thiết kế kiến trúc xác định điều gì?",
+    "type": "radio"
+  },
+  {
+    "no": "2",
+    "options": [
+      {
+        "is_correct": false,
+        "text": "Người vận hành và bảo trì hệ thống"
+      },
+      {
+        "is_correct": true,
+        "text": "Kiến trúc sư"
+      },
+      {
+        "is_correct": false,
+        "text": "Kiểm thử viên"
+      },
+      {
+        "is_correct": false,
+        "text": "Người dùng"
+      }
+    ],
+    "text": "Ai là người chịu trách nhiệm thiết kế kiến trúc phần mềm?",
+    "type": "radio"
+  },
+  {
+    "no": "3",
+    "options": [
+      {
+        "is_correct": false,
+        "text": "Giúp tạo giao diện người dùng hấp dẫn hơn"
+      },
+      {
+        "is_correct": true,
+        "text": "Giảm rủi ro trong sản xuất và vận hành"
+      },
+      {
+        "is_correct": true,
+        "text": "Giúp đảm bảo hiệu suất, bảo trì và mở rộng hệ thống"
+      },
+      {
+        "is_correct": true,
+        "text": "Giúp phát triển phần mềm có định hướng"
+      },
+      {
+        "is_correct": false,
+        "text": "Giúp tạo ra phần mềm nhanh chóng hơn"
+      }
+    ],
+    "text": "Những lý do nào sau đây cho thấy kiến trúc phần mềm là quan trọng? (Chọn 3)",
+    "type": "check-box"
+  },
+  {
+    "no": "4",
+    "options": [
+      {
+        "is_correct": false,
+        "text": "Kiểm thử giao diện"
+      },
+      {
+        "is_correct": true,
+        "text": "Tổ chức cấu trúc hệ thống"
+      },
+      {
+        "is_correct": false,
+        "text": "Xác định các yêu cầu trong hệ thống"
+      },
+      {
+        "is_correct": false,
+        "text": "Mã hóa hệ thống"
+      }
+    ],
+    "text": "Mục tiêu của thiết kế kiến trúc là gì?",
+    "type": "radio"
+  },
+  {
+    "no": "5",
+    "options": [
+      {
+        "is_correct": false,
+        "text": "Thập niên 1960"
+      },
+      {
+        "is_correct": false,
+        "text": "Thập niên 1980"
+      },
+      {
+        "is_correct": true,
+        "text": "Thập niên 1990"
+      },
+      {
+        "is_correct": false,
+        "text": "Thập niên 1970"
+      }
+    ],
+    "text": "Khái niệm kiến trúc phần mềm bắt đầu xuất hiện một cách rõ ràng vào đầu khoảng thời gian nào ?",
+    "type": "radio"
+  },
+  {
+    "no": "6",
+    "options": [
+      {
+        "is_correct": true,
+        "text": "Data view"
+      },
+      {
+        "is_correct": false,
+        "text": "Logical view"
+      },
+      {
+        "is_correct": false,
+        "text": "Development view"
+      },
+      {
+        "is_correct": false,
+        "text": "Process view"
+      }
+    ],
+    "text": "Trong mô hình 4 + 1 View Model của Philippe Kruchten, góc nhìn nào dưới đây không thuộc 4 góc nhìn chính?",
+    "type": "radio"
+  },
+  {
+    "no": "7",
+    "options": [
+      {
+        "is_correct": false,
+        "text": "Một ADL duy nhất"
+      },
+      {
+        "is_correct": false,
+        "text": "Cloud-Native Design"
+      },
+      {
+        "is_correct": true,
+        "text": "Phương pháp View – Viewpoint"
+      },
+      {
+        "is_correct": false,
+        "text": "Presentation-Business-Data"
+      }
+    ],
+    "text": "ISO/IEC/IEEE 42010 khuyến nghị cách tiếp cận nào khi mô hình hóa kiến trúc?",
+    "type": "radio"
+  },
+  {
+    "no": "8",
+    "options": [
+      {
+        "is_correct": false,
+        "text": "Thời gian chạy (Run-time)"
+      },
+      {
+        "is_correct": true,
+        "text": "Nghiệp vụ (Business)"
+      },
+      {
+        "is_correct": false,
+        "text": "Kỹ thuật (Technical)"
+      },
+      {
+        "is_correct": false,
+        "text": "Thực thi (Execution)"
+      }
+    ],
+    "text": "Thuộc tính “Time to Market” được xếp vào nhóm thuộc tính chất lượng nào?",
+    "type": "radio"
+  },
+  {
+    "no": "9",
+    "options": [
+      {
+        "is_correct": true,
+        "text": "Mỗi dịch vụ có thể deploy & scale độc lập"
+      },
+      {
+        "is_correct": false,
+        "text": "Ít cần giám sát hệ thống (observability)"
+      },
+      {
+        "is_correct": false,
+        "text": "Cho phép gộp chung cơ sở dữ liệu để dễ quản lý"
+      },
+      {
+        "is_correct": false,
+        "text": "Không đòi hỏi container hay orchestration"
+      }
+    ],
+    "text": "Vì sao kiến trúc Microservices thường giảm rủi ro khi mở rộng so với kiến trúc Monolithic?",
+    "type": "radio"
+  },
+  {
+    "no": "10",
+    "options": [
+      {
+        "is_correct": false,
+        "text": "Tự động sinh mã nguồn từ view logic"
+      },
+      {
+        "is_correct": false,
+        "text": "Thay thế hoàn toàn tài liệu kiến trúc truyền thống"
+      },
+      {
+        "is_correct": false,
+        "text": "Buộc mọi dự án phải dùng UML"
+      },
+      {
+        "is_correct": true,
+        "text": "Thuyết phục nhiều nhóm vai trò nhờ các view kiến trúc khác nhau"
+      }
+    ],
+    "text": "Mô hình 4 + 1 View của Kruchten chủ yếu giúp đạt mục tiêu nào?",
+    "type": "radio"
+  },
+  {
+    "no": "11",
+    "options": [
+      {
+        "is_correct": false,
+        "text": "Sau khi triển khai hệ thống"
+      },
+      {
+        "is_correct": false,
+        "text": "Trước khi thu thập yêu cầu"
+      },
+      {
+        "is_correct": true,
+        "text": "Sau khi có đặc tả yêu cầu"
+      },
+      {
+        "is_correct": false,
+        "text": "Sau giai đoạn kiểm thử"
+      }
+    ],
+    "text": "Thiết kế kiến trúc phần mềm được tiến hành vào giai đoạn nào trong vòng đời phát triển phần mềm?",
+    "type": "radio"
+  },
+  {
+    "no": "12",
+    "options": [
+      {
+        "is_correct": false,
+        "text": "Classes, Methods, Packages"
+      },
+      {
+        "is_correct": true,
+        "text": "Components, Connectors, Configurations"
+      },
+      {
+        "is_correct": false,
+        "text": "Requirements, Test Cases, Use Cases"
+      },
+      {
+        "is_correct": false,
+        "text": "Algorithms, Data Structures, Interfaces"
+      }
+    ],
+    "text": "Các thành phần chính của kiến trúc phần mềm bao gồm gì?",
+    "type": "radio"
+  },
+  {
+    "no": "13",
+    "options": [
+      {
+        "is_correct": true,
+        "text": "Hướng dẫn đội phát triển"
+      },
+      {
+        "is_correct": false,
+        "text": "Kiểm thử phần mềm"
+      },
+      {
+        "is_correct": true,
+        "text": "Lựa chọn công nghệ"
+      },
+      {
+        "is_correct": true,
+        "text": "Phân tích yêu cầu"
+      }
+    ],
+    "text": "Nhiệm vụ chính của Kiến trúc sư phần mềm gồm: (Chọn 3)",
+    "type": "check-box"
+  },
+  {
+    "no": "14",
+    "options": [
+      {
+        "is_correct": false,
+        "text": "Mối quan hệ giữa các thành phần"
+      },
+      {
+        "is_correct": false,
+        "text": "Thuộc tính có thể quan sát được từ bên ngoài"
+      },
+      {
+        "is_correct": false,
+        "text": "Các thành phần phần mềm"
+      },
+      {
+        "is_correct": true,
+        "text": "Thuật toán chi tiết"
+      }
+    ],
+    "text": "Theo định nghĩa của Bass, kiến trúc phần mềm của một hệ thống không bao gồm yếu tố nào dưới đây?",
+    "type": "radio"
+  },
+  {
+    "no": "15",
+    "options": [
+      {
+        "is_correct": true,
+        "text": "Microservices"
+      },
+      {
+        "is_correct": false,
+        "text": "Layered Architecture"
+      },
+      {
+        "is_correct": false,
+        "text": "Monolithic"
+      },
+      {
+        "is_correct": false,
+        "text": "Client-Server"
+      }
+    ],
+    "text": "Phong cách kiến trúc nào nhấn mạnh “mỗi dịch vụ càng nhỏ càng tốt” và triển khai độc lập?",
+    "type": "radio"
+  },
+  {
+    "no": "16",
+    "options": [
+      {
+        "is_correct": true,
+        "text": "Mỗi dịch vụ có thể deploy & scale độc lập"
+      },
+      {
+        "is_correct": false,
+        "text": "Ít cần giám sát hệ thống (observability)"
+      },
+      {
+        "is_correct": false,
+        "text": "Không đòi hỏi container hay orchestration"
+      },
+      {
+        "is_correct": false,
+        "text": "Cho phép gộp chung cơ sở dữ liệu để dễ quản lý"
+      }
+    ],
+    "text": "Vì sao kiến trúc Microservices thường giảm rủi ro khi mở rộng so với kiến trúc Monolithic?",
+    "type": "radio"
+  },
+  {
+    "candidates": [
+      "là đơn vị mô tả các ràng buộc trong hệ thống.",
+      "là đơn vị chỉ các mô tả hành vi trong hệ thống",
+      "Cơ chế giúp các thành phần tương tác (gọi thủ tục, sự kiện, truy cập dữ liệu...)",
+      "Cách tổ chức tổng thể các thành phần & kết nối thành đồ thị kiến trúc của hệ thống",
+      "Đơn vị đóng gói chức năng & trạng thái của hệ thống, được nhìn từ bên ngoài qua giao diện"
+    ],
+    "drag_map": [
+      {
+        "answer": "Cơ chế giúp các thành phần tương tác (gọi thủ tục, sự kiện, truy cập dữ liệu...)",
+        "text": "Kết nối (Connector)"
+      },
+      {
+        "answer": "Cách tổ chức tổng thể các thành phần & kết nối thành đồ thị kiến trúc của hệ thống",
+        "text": "Cấu hình (Configuration)"
+      },
+      {
+        "answer": "Đơn vị đóng gói chức năng & trạng thái của hệ thống, được nhìn từ bên ngoài qua giao diện",
+        "text": "Thành phần (Component)"
+      }
+    ],
+    "no": "17",
+    "text": "Kéo tên thuật ngữ ở cột trái sang ô định nghĩa tương ứng ở cột phải.",
+    "type": "drag-drop-2"
+  },
+  {
+    "candidates": [
+      "Các thành phần độc lập",
+      "Phân tách thành 3 thành phần Model - View - Controller",
+      "Thành phần giao tiếp bằng phát/bắt sự kiện",
+      "Phân tách theo tầng (presentation, business, data)",
+      "Server trung tâm phục vụ nhiều client",
+      "Dịch vụ nhỏ, triển khai độc lập"
+    ],
+    "drag_map": [
+      {
+        "answers": ["Thành phần giao tiếp bằng phát/bắt sự kiện"],
+        "text": "Event-Driven"
+      },
+      {
+        "answers": ["Phân tách theo tầng (presentation, business, data)"],
+        "text": "Layered"
+      },
+      {
+        "answers": ["Server trung tâm phục vụ nhiều client"],
+        "text": "Client-Server"
+      },
+      {
+        "answers": ["Dịch vụ nhỏ, triển khai độc lập"],
+        "text": "Microservices"
+      }
+    ],
+    "no": "18",
+    "text": "Kéo thả đáp án thích hợp vào chỗ trống",
+    "type": "grouping-2"
+  },
+  {
+    "no": "19",
+    "sub_questions": [
+      {
+        "no": "1",
+        "options": [
+          {
+            "is_correct": true,
+            "text": "Sai"
+          },
+          {
+            "is_correct": false,
+            "text": "Đúng"
+          }
+        ],
+        "text": "Thiết kế kiến trúc phần mềm là thiết kế chi tiết"
+      },
+      {
+        "no": "2",
+        "options": [
+          {
+            "is_correct": true,
+            "text": "Đúng"
+          },
+          {
+            "is_correct": false,
+            "text": "Sai"
+          }
+        ],
+        "text": "Thiết kế kiến trúc dựa trên SRS"
+      },
+      {
+        "no": "3",
+        "options": [
+          {
+            "is_correct": true,
+            "text": "Đúng"
+          },
+          {
+            "is_correct": false,
+            "text": "Sai"
+          }
+        ],
+        "text": "Pipe-and-Filter là một phong cách kiến trúc"
+      },
+      {
+        "no": "4",
+        "options": [
+          {
+            "is_correct": false,
+            "text": "Đúng"
+          },
+          {
+            "is_correct": true,
+            "text": "Sai"
+          }
+        ],
+        "text": "Kiến trúc phần mềm là phong cách kiến trúc"
+      }
+    ],
+    "text": "Các phát biểu sau Đúng hay Sai",
+    "type": "group-radio"
+  },
+  {
+    "no": "20",
+    "sub_questions": [
+      {
+        "no": "1",
+        "options": [
+          {
+            "is_correct": false,
+            "text": "Đúng"
+          },
+          {
+            "is_correct": true,
+            "text": "Sai"
+          }
+        ],
+        "text": "Kiến trúc phần mềm là mô tả cấu trúc phần mềm tĩnh."
+      },
+      {
+        "no": "2",
+        "options": [
+          {
+            "is_correct": false,
+            "text": "Đúng"
+          },
+          {
+            "is_correct": true,
+            "text": "Sai"
+          }
+        ],
+        "text": "Mục đích của giai đoạn thiết kế phần mềm là tạo ra một tài liệu đặc tả yêu cầu phần mềm."
+      },
+      {
+        "no": "3",
+        "options": [
+          {
+            "is_correct": true,
+            "text": "Đúng"
+          },
+          {
+            "is_correct": false,
+            "text": "Sai"
+          }
+        ],
+        "text": "Thiết kế kiến trúc phần mềm liên quan đến nhiều phương pháp thiết kế phần mềm và các mẫu kiến trúc."
+      },
+      {
+        "no": "4",
+        "options": [
+          {
+            "is_correct": true,
+            "text": "Đúng"
+          },
+          {
+            "is_correct": false,
+            "text": "Sai"
+          }
+        ],
+        "text": "Hướng đối tượng là một phương pháp thiết kế"
+      }
+    ],
+    "text": "Những phát biểu sau đây Đúng hay Sai:",
+    "type": "group-radio"
+  }
+]

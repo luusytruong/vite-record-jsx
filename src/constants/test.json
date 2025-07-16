@@ -1,0 +1,195 @@
+[
+  {
+    "options": [
+      {
+        "text": "Classes, Methods, Packages",
+        "is_correct": false
+      },
+      {
+        "text": "Components, Connectors, Configurations",
+        "is_correct": true
+      },
+      {
+        "text": "Requirements, Test Cases, Use Cases",
+        "is_correct": false
+      },
+      {
+        "text": "Algorithms, Data Structures, Interfaces",
+        "is_correct": false
+      }
+    ],
+    "text": "Các thành phần chính của kiến trúc phần mềm bao gồm gì?",
+    "type": "radio",
+    "no": "1"
+  },
+  {
+    "options": [
+      {
+        "text": "Hướng dẫn đội phát triển",
+        "is_correct": true
+      },
+      {
+        "text": "Kiểm thử phần mềm",
+        "is_correct": false
+      },
+      {
+        "text": "Lựa chọn công nghệ",
+        "is_correct": true
+      },
+      {
+        "text": "Phân tích yêu cầu",
+        "is_correct": true
+      }
+    ],
+    "text": "Nhiệm vụ chính của Kiến trúc sư phần mềm gồm: (Chọn 3)",
+    "type": "checkbox",
+    "no": "2"
+  },
+  {
+    "candidates": [
+      "Các thành phần độc lập",
+      "Phân tách thành 3 thành phần Model - View - Controller"
+    ],
+    "drag_map": [
+      {
+        "text": "Event-Driven",
+        "answer": "Thành phần giao tiếp bằng phát/bắt sự kiện"
+      },
+      {
+        "text": "Layered",
+        "answer": "Phân tách theo tầng (presentation, business, data)"
+      },
+      {
+        "text": "Client-Server",
+        "answer": "Server trung tâm phục vụ nhiều client"
+      },
+      {
+        "text": "Microservices",
+        "answer": "Dịch vụ nhỏ, triển khai độc lập"
+      }
+    ],
+    "text": "Kéo thả đáp án thích hợp vào chỗ trống",
+    "type": "drag-drop-2",
+    "no": "3"
+  },
+  {
+    "candidates": [
+      "Các thành phần độc lập",
+      "Phân tách thành 3 thành phần Model - View - Controller"
+    ],
+    "drag_map": [
+      {
+        "text": "Event-Driven",
+        "answers": [
+          "Phân tách theo tầng (presentation, business, data)",
+          "Thành phần giao tiếp bằng phát/bắt sự kiện"
+        ]
+      },
+      {
+        "text": "Layered",
+        "answers": [
+          "Phân tách theo tầng (presentation, business, data)",
+          "Phân tách theo tầng (presentation, business, data)",
+          "Phân tách theo tầng (presentation, business, data)"
+        ]
+      },
+      {
+        "text": "Client-Server",
+        "answers": ["Server trung tâm phục vụ nhiều client"]
+      },
+      {
+        "text": "Microservices",
+        "answers": ["Dịch vụ nhỏ, triển khai độc lập"]
+      }
+    ],
+    "text": "Kéo thả đáp án thích hợp vào chỗ trống",
+    "type": "grouping-2",
+    "no": "4"
+  },
+  {
+    "sub_questions": [
+      {
+        "no": "1",
+        "text": "Thiết kế kiến trúc phần mềm là thiết kế chi tiết",
+        "options": [
+          {
+            "text": "Sai",
+            "is_correct": true
+          },
+          {
+            "text": "Đúng",
+            "is_correct": false
+          }
+        ]
+      },
+      {
+        "no": "2",
+        "text": "Thiết kế kiến trúc dựa trên SRS",
+        "options": [
+          {
+            "text": "Đúng",
+            "is_correct": true
+          },
+          {
+            "text": "Sai",
+            "is_correct": false
+          }
+        ]
+      },
+      {
+        "no": "3",
+        "text": "Pipe-and-Filter là một phong cách kiến trúc",
+        "options": [
+          {
+            "text": "Đúng",
+            "is_correct": true
+          },
+          {
+            "text": "Sai",
+            "is_correct": false
+          }
+        ]
+      },
+      {
+        "no": "4",
+        "text": "Kiến trúc phần mềm là phong cách kiến trúc",
+        "options": [
+          {
+            "text": "Đúng",
+            "is_correct": false
+          },
+          {
+            "text": "Sai",
+            "is_correct": true
+          }
+        ]
+      }
+    ],
+    "text": "Các phát biểu sau Đúng hay Sai",
+    "type": "group-radio",
+    "no": "5"
+  },
+  {
+    "no": "6",
+    "text": "Điền thông tin thích hợp vào các chỗ trống trong phát biểu sau đây: DevOps là sự kết hợp giữa __(1)___ và __(2)___, nhằm tối ưu quy trình phát triển phần mềm. Trong đó, nhóm __(3)__ chịu trách nhiệm phát triển, trong khi nhóm __(4)___ chịu trách nhiệm về cơ sở hạ tầng, triển khai ứng dụng, giám sát ứng dung vận hành và đảm bảo ứng dụng hoạt động ổn định, hiểu quả trên môi trường vận hành. Biết các thông tin có thể điền bao gồm: ops, dev, sec, kiểm thử, lập trình, phát triển, vận hành",
+    "input_answers": [
+      {
+        "text": "ô trống (1)",
+        "value": "dev"
+      },
+      {
+        "text": "ô trống (2)",
+        "value": "ops"
+      },
+      {
+        "text": "ô trống (4)",
+        "value": "phát triển"
+      },
+      {
+        "text": "ô trống (3)",
+        "value": "vận hành"
+      }
+    ],
+    "type": "group-input"
+  }
+]

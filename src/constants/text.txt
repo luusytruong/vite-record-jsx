@@ -1,0 +1,63 @@
+Question 1 (radio)
+Các thành phần chính của kiến trúc phần mềm bao gồm gì?
+A. Classes, Methods, Packages
+*B. Components, Connectors, Configurations
+C. Requirements, Test Cases, Use Cases
+D. Algorithms, Data Structures, Interfaces
+Question 2 (checkbox)
+Nhiệm vụ chính của Kiến trúc sư phần mềm gồm: (Chọn 3)
+*A. Hướng dẫn đội phát triển
+B. Kiểm thử phần mềm
+*C. Lựa chọn công nghệ
+*D. Phân tích yêu cầu
+Question 3 (drag-drop-2)
+Kéo thả đáp án thích hợp vào chỗ trống
+Các thành phần độc lập
+Phân tách thành 3 thành phần Model - View - Controller
+1) Event-Driven
+*Thành phần giao tiếp bằng phát/bắt sự kiện
+154) Layered
+*Phân tách theo tầng (presentation, business, data)
+112) Client-Server
+*Server trung tâm phục vụ nhiều client
+12) Microservices
+*Dịch vụ nhỏ, triển khai độc lập
+Question 4 (grouping-2)
+Kéo thả đáp án thích hợp vào chỗ trống
+Các thành phần độc lập
+Phân tách thành 3 thành phần Model - View - Controller
+31) Event-Driven
+*Phân tách theo tầng (presentation, business, data)
+*Thành phần giao tiếp bằng phát/bắt sự kiện
+12) Layered
+*Phân tách theo tầng (presentation, business, data)
+*Phân tách theo tầng (presentation, business, data)
+*Phân tách theo tầng (presentation, business, data)
+71) Client-Server
+*Server trung tâm phục vụ nhiều client
+1) Microservices
+*Dịch vụ nhỏ, triển khai độc lập
+Question 5 (group-radio)
+Các phát biểu sau Đúng hay Sai
+1) Thiết kế kiến trúc phần mềm là thiết kế chi tiết
+*A. Sai
+B. Đúng
+2) Thiết kế kiến trúc dựa trên SRS
+*A. Đúng
+B. Sai
+3) Pipe-and-Filter là một phong cách kiến trúc
+*A. Đúng
+B. Sai
+4) Kiến trúc phần mềm là phong cách kiến trúc
+A. Đúng
+*B. Sai
+Question 6 (group-input)
+Điền thông tin thích hợp vào các chỗ trống trong phát biểu sau đây: DevOps là sự kết hợp giữa __(1)___ và __(2)___, nhằm tối ưu quy trình phát triển phần mềm. Trong đó, nhóm __(3)__ chịu trách nhiệm phát triển, trong khi nhóm __(4)___ chịu trách nhiệm về cơ sở hạ tầng, triển khai ứng dụng, giám sát ứng dung vận hành và đảm bảo ứng dụng hoạt động ổn định, hiểu quả trên môi trường vận hành. Biết các thông tin có thể điền bao gồm: ops, dev, sec, kiểm thử, lập trình, phát triển, vận hành
+1) ô trống (1)
+dev
+2) ô trống (2)
+ops
+3) ô trống (4)
+phát triển
+4) ô trống (3)
+vận hành

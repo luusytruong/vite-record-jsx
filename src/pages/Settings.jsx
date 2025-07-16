@@ -1,9 +1,11 @@
+import parseJSON from "@/utils/parseJSON";
+import text from "@/constants/text.txt?raw";
+import test from "@/constants/test.json";
+import { compareArrays } from "@/utils/compare";
 const Settings = () => {
-  return (
-    <div>
-      <h1>Settings</h1>
-    </div>
-  );
+  const json = parseJSON(text);
+  console.log(compareArrays(json, test));
+  return <div></div>;
 };
 
 export default Settings;
