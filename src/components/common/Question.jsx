@@ -1,10 +1,27 @@
 import { cn } from "@/utils/formatter";
+import Button from "./Button";
+import { Copy } from "lucide-react";
+import { useRef } from "react";
+import { copyFormat } from "@/utils/utils";
 
 const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
 const Question = ({ question }) => {
+  const ref = useRef();
+  const handleCopy = () => {
+    copyFormat(ref.current);
+  };
   return (
-    <div className="flex flex-col items-stretch p-6 rounded-2xl bg-white shadow-sm hover:shadow-lg">
+    <div
+      ref={ref}
+      className="relative flex flex-col items-stretch p-6 rounded-2xl bg-white shadow-sm hover:shadow-lg"
+    >
+      <Button
+        icon={Copy}
+        size={16}
+        className="absolute top-1 right-1 p-3 opacity-20 hover:opacity-100 hover:bg-gray-100 hover:shadow-white hover:shadow-inner rounded-2xl"
+        onClick={handleCopy}
+      />
       <p className="text-lg">
         Question {question?.no}
         <span> ({question?.type})</span>
@@ -123,7 +140,7 @@ const RenderContent = ({ question }) => {
                   className="line-clamp-1 answer-color"
                   style={{ color: "#00aa00" }}
                 >
-                  *{ans}
+                  {ans && `*${ans}`}
                 </p>
               ))}
             </div>
@@ -146,7 +163,7 @@ const RenderContent = ({ question }) => {
                 className="line-clamp-1 answer-color"
                 style={{ color: "#00aa00" }}
               >
-                *{item.answer}
+                {item.answer && `*${item.answer}`}
               </p>
             </div>
           ))}

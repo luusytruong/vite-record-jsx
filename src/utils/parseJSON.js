@@ -13,7 +13,7 @@ export default function parseJSON(text) {
     }
 
     // Parse question header
-    const questionMatch = line.match(/Question (\d+) \(([^)]+)\)/);
+    const questionMatch = line.match(/Question\s+(\d+)\s+\(\s*([^)]+)\s*\)/i);
     if (!questionMatch) {
       i++;
       continue;
@@ -22,17 +22,30 @@ export default function parseJSON(text) {
     const questionNo = questionMatch[1];
     const questionType = questionMatch[2];
 
-    // Get question text
+    // Get question text - for group-input, collect all lines until we hit numbered items
     i++;
-    const questionText = lines[i]?.trim() || "";
+    let questionText = "";
+
+    if (questionType === "group-input") {
+      // For group-input, collect all text lines until we hit numbered items (1), 2), etc.)
+      while (i < lines.length && !lines[i].match(/^\d+\)/)) {
+        const currentLine = lines[i].trim();
+        if (currentLine && !currentLine.startsWith("Question")) {
+          questionText += (questionText ? " " : "") + currentLine;
+        }
+        i++;
+      }
+    } else {
+      // For other types, just get the immediate next line
+      questionText = lines[i]?.trim() || "";
+      i++;
+    }
 
     const question = {
       no: questionNo,
       text: questionText,
       type: questionType,
     };
-
-    i++;
 
     // Parse based on question type
     if (questionType === "radio") {
@@ -50,7 +63,7 @@ export default function parseJSON(text) {
         });
         i++;
       }
-    } else if (questionType === "checkbox") {
+    } else if (questionType === "check-box") {
       question.options = [];
 
       // Parse options with multiple correct answers
@@ -159,23 +172,26 @@ export default function parseJSON(text) {
     } else if (questionType === "group-input") {
       question.input_answers = [];
 
-      // Parse input answers
+      // Parse input answers - format: "1) text" followed by "answer"
       while (i < lines.length && lines[i].match(/^\d+\)/)) {
         const inputLine = lines[i].trim();
         const inputText = inputLine.replace(/^\d+\)\s*/, "");
 
         i++;
-        if (
-          i < lines.length &&
-          !lines[i].startsWith("Question") &&
-          !lines[i].match(/^\d+\)/)
-        ) {
-          const value = lines[i].trim();
-          question.input_answers.push({
-            text: inputText,
-            value: value,
-          });
-          i++;
+        // Get the answer value (next line that's not a question or numbered item)
+        if (i < lines.length) {
+          const nextLine = lines[i].trim();
+          if (
+            !nextLine.startsWith("Question") &&
+            !nextLine.match(/^\d+\)/) &&
+            nextLine !== ""
+          ) {
+            question.input_answers.push({
+              text: inputText,
+              value: nextLine,
+            });
+            i++;
+          }
         }
       }
     }

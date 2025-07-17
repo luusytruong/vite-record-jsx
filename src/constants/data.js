@@ -1,4 +1,4 @@
-export const questions = [
+export const sampleQuestions = [
   {
     no: "1",
     text: "Theo Garlan và Shaw, thiết kế kiến trúc xác định điều gì?",
@@ -26,7 +26,7 @@ export const questions = [
     no: "2",
     text: "Cho biết đây là mô hình màu nào?",
     img_src:
-      "blob:https://lms.ictu.edu.vn/dd34bc88-d362-4c0d-a374-e9c3a37f5847",
+      "/dist/image.png",
     options: [
       {
         is_correct: false,

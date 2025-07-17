@@ -2,6 +2,8 @@ import { Copy, Home, Settings, Trash, Upload } from "lucide-react";
 import React from "react";
 import { NavLink } from "react-router-dom";
 import Button from "../common/Button";
+import { copyFormat } from "@/utils/utils";
+import { setStorage } from "@/utils/chrome";
 import toast from "react-hot-toast";
 const NavItem = ({ to, icon }) => {
   const Icon = icon;
@@ -14,20 +16,16 @@ const NavItem = ({ to, icon }) => {
   );
 };
 const Header = () => {
-  const handleCopyMainContent = () => {
+  const handleCopy = () => {
     const main = document.querySelector("main");
-    if (!main) return;
-
-    const html = main.innerHTML;
-    navigator.clipboard
-      .write([
-        new ClipboardItem({
-          "text/html": new Blob([html], { type: "text/html" }),
-          "text/plain": new Blob([main.innerText], { type: "text/plain" }),
-        }),
-      ])
-      .then(() => toast.success("Copy thành công"))
-      .catch(() => toast.error("Copy thất bại"));
+    copyFormat(main);
+  };
+  const handleDelete = () => {
+    setStorage("test", []).then((res) => {
+      res
+        ? toast.success("Xoá dữ liệu thành công")
+        : toast.error("Xoá dữ liệu thất bại");
+    });
   };
   return (
     <header className="flex select-none">
@@ -39,13 +37,14 @@ const Header = () => {
           <Button
             className="flex p-3 bg-white rounded-2xl shadow-sm hover:shadow-lg"
             icon={Copy}
-            onClick={handleCopyMainContent}
+            onClick={handleCopy}
           />
           <Button
             classText="ml-2"
             className="flex items-center justify-center p-3 w-full bg-white text-transparent rounded-2xl shadow-sm hover:shadow-lg hover:text-red-600"
             text={"Xoá hết"}
             icon={Trash}
+            onClick={handleDelete}
           />
         </ul>
       </nav>

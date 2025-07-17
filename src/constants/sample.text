@@ -1,0 +1,320 @@
+
+
+Question 1 (radio)
+Bảo trì hiệu chỉnh (Corrective Maintenance) nhằm mục đích gì?
+A. Hiệu chỉnh lại các thông tin về kế hoạch triển khai dự án
+B. Cập nhật lại bản thiết kế phần mềm
+*C. Sửa lỗi sau khi phần mềm được triển khai đến người dùng cuối
+D. Hiệu chỉnh phần mềm để nâng cao hiệu xuất trước khi phần mềm được triển khai đến người dùng cuối.
+
+Question 2 (radio)
+Mục tiêu của bảo trì phòng ngừa là gì?
+*A. Ngăn ngừa lỗi có thể phát sinh
+B. Tối ưu hóa giao diện
+C. Kiểm tra tính bảo mật
+D. Thêm chức năng mới
+
+Question 3 (radio)
+Một phần mềm được đánh giá là "dễ bảo trì" khi nào?
+*A. Có cấu trúc rõ ràng, dễ hiểu, dễ thay đổi
+B. Có giao diện đẹp, được lập trình bởi nhiều người
+C. Có mã nguồn ngắn
+D. Có nhiều tính năng
+
+Question 4 (radio)
+Loại bảo trì nào liên quan đến việc thêm tính năng mới dựa trên phản hồi người dùng?
+*A. Bảo trì tiến hóa
+B. Bảo trì thích nghi
+C. Bảo trì hiệu chỉnh
+D. Bảo trì phòng ngừa
+
+Question 5 (radio)
+Lập trình viên nên làm gì trước khi thay đổi mã trong quá trình bảo trì?
+A. Sửa ngay mã nguồn để tiết kiệm thời gian
+B. Đổi tên project
+C. Xóa mã cũ
+*D. Hiểu rõ nguyên nhân và tác động của thay đổi
+
+Question 6 (radio)
+Các quy trình phần mềm theo lịch sử phát triển có thể chia thành mấy loai?
+A. 5
+B. 2
+*C. 4
+D. 3
+
+Question 7 (radio)
+DevOps kết hợp chặt chẽ giữa ______?
+A. Kinh doanh và marketing
+*B. Phát triển và vận hành
+C. Kiểm thử và bảo trì
+D. Phân tích và thiết kế
+
+Question 8 (radio)
+Quá trình đảm bảo phần mềm hoạt động ổn định sau triển khai gọi là gì?
+*A. Vận hành phần mềm
+B. Kiểm thử phần mềm
+C. Phát triển phần mềm
+D. Thiết kế hệ thống
+
+Question 9 (radio)
+Bảo trì thích nghi (Adaptive Maintenance) là gì?
+A. Loại bỏ chức năng cũ, và bổ sung thêm các chức năng mới cho phần mềm
+*B. Cập nhật phần mềm sao cho hoạt động ổn định trên môi trường mới
+C. Tối ưu thuật toán và cấu trúc dữ liệu để đáp ứng các yêu cầu thay đổi từ phía đối tác
+D. Cải thiện giao diện người dùng sao cho phù hợp các chuẩn thiết kế UI/UX
+
+Question 10 (radio)
+Trong quy trình bảo trì phần mềm, bước đầu tiên thường là gì?
+A. Triển khai phần mềm mới
+B. Kiểm thử hệ thống
+*C. Phân tích yêu cầu thay đổi
+D. Viết mã mới
+
+Question 11 (radio)
+Yếu tố nào quan trọng nhất giúp phần mềm dễ bảo trì?
+A. Dùng nhiều thư viện ngoài
+B. Dùng ít dòng mã
+C. Nhiều file cấu hình
+*D. Có cấu trúc mã rõ ràng và được chú thích tốt
+
+Question 12 (radio)
+Một trong các đặc điểm khác biệt quan trọng của DevOps so với quy trình phần mềm truyền thống là gì?
+A. Không cần quản lý lỗi các lỗi là không thể xảy ra khi tổ chức/doanh nghiệp áp dụng DevOps
+B. Triển khai thủ công các công đoạn trong quy trình phần mềm
+*C. Tự động hóa quy trình với sự trợ giúp của chuỗi các công cụ, công nghệ hiện đại
+D. Không cần kiểm thử phần mềm một cách nghiêm ngặt
+
+Question 13 (radio)
+Mô hình quy trình thác nước được giới thiệu bởi ai? vào năm nào?
+A. Frederick P. Brooks (1975)
+*B. Winston W. Royce (1970)
+C. Barry Boehm (1988)
+D. IBM (1967)
+
+Question 14 (radio)
+Vận hành phần mềm theo góc nhìn của người dùng cuối là gì?
+A. Quá trình sửa lỗi trong phần mềm
+B. Quá trình cải tiến hệ thống
+*C. Cách người dùng tương tác với hệ thống để đạt mục tiêu
+D. Tìm lỗi logic
+
+Question 15 (checkbox)
+Các công cụ thường dùng trong DevOps là những công cụ nào?
+A. Microsoft excel, Microsoft word
+*B. Git/GitHub, GitLab, Bitbucket
+*C. Maven/Gradle, Nexus, SonarQube
+*D. Jenkins, Docker, K8s
+
+Question  16 (group-radio)
+Các phát biểu sau đúng hay sai?
+1) Scrum và Kanban thuộc loại quy trình phần mềm dự đoán (predictive processes 
+*A. Sai
+B. Đúng
+2) Scrum và Kanban thuộc loại quy trình phần mềm linh hoạt (Adaptive Processes)
+*A. Đúng
+B. Sai
+3) RUP, Spiral là các mô hình quy trình phần mềm thuộc loại quy trình dự đoán (predictive processes)
+*A. Sai
+B. Đúng
+4) RUP, Spiral là các mô hình quy trình phần mềm thuộc loại quy trình lặp (iterative processes)
+*A. Đúng
+B. Sai
+
+Question  17 (group-radio)
+Các phát biểu sau đúng hay sai?
+1)Bảo trì phần mềm được tiến hành trước khi phần mềm được triển khai đến môi trường người dùng
+A. Đúng
+*B. Sai
+2)Việc đảm bảo phần mềm hoạt động đúng và ổn định sau khi đưa vào sử dụng là trách nhiệm của khách hàng, và người dùng , không thuộc trách nhiệm của nhóm vận hành.
+A. Đúng
+*B. Sai
+3)Bảo trì phần mềm là quá trình duy trì và cải tiến phần mềm sau khi triển khai
+*A. Đúng
+B. Sai
+4)Một trong các lợi ích quan trọng của bảo trì phần mềm là đảm bảo phần mềm hoạt động ổn định, lâu dài, và nâng cao trải nghiệm người dùng
+*A. Đúng
+B. Sai
+
+Question  18 (group-radio)
+Các phát biểu sau đúng hay sai?
+1)Với Agile, ROI tăng, do giá trị đặc trưng của sản phẩm tăng theo thời gian
+*A. Đúng
+B. Sai
+2)DevOps có đầy đủ các lợi thế của các mô hình quy trình Agile
+*A. Đúng
+B. Sai
+3)Agile dựa trên nguyên tắc kinh tế: “The later we deliver a feature, the sooner our customers will pay us for it”.
+A. Đúng
+*B. Sai
+4)Agile dựa trên nguyên tắc kinh tế: “The sooner we deliver a feature, the sooner our customers will pay us for it”.
+*A. Đúng
+B. Sai
+
+Question 19 (group-radio)
+Các phát biểu sau đúng hay sai?
+1)Các quy trình phần mềm linh hoạt không loại bỏ được vấn đề tam giác thép
+*A. Sai
+B. Đúng
+2)Mô hình quy trình thác nước (waterfall model) loại bỏ hoàn toàn được vấn đề về tam giác thép (ion triangle)
+*A. Sai
+B. Đúng
+3)Vấn đề tam giác thép được hiểu là: sự cố định về tập yêu cầu sẽ dẫn đến lịch biểu cố định, ngân quỹ và các công nghệ cũng được cố định theo lịch biểu. Các thành viên tham gia triển khai dự án phải bám sát kế hoạch, liên tục bị thúc ép bởi deadline, chỉ cần thay đổi yêu cầu khách hàng, hoặc không hoàn thành công việc đúng tiến độ, dự án có thể dẫn đến thất bại
+*A. Đúng
+B. Sai
+4)Các quy trình phần mềm lặp không loại bỏ được vấn đề về tam giác thép
+*A. Sai
+B. Đúng
+
+Question 20 (group-radio)
+Các phát biểu sau đúng hay sai?
+1)Sửa lỗi chức năng tìm kiếm do trả về kết quả sai vì khi người dùng sử dụng là ví dụ về bảo trì thích nghi (Adaptive maintenance)
+A. Đúng
+*B. Sai
+2)Nâng cấp tính năng tìm kiếm để tối ưu về mặt hiệu năng là một ví dụ về bảo trì tiến hóa (evolutionary maintenance)
+A. Sai
+*B. Đúng
+3)Di chuyển ứng dụng sang hạ tầng mới (hạ tầng đám mây) là ví dụ về bảo trì sửa lỗi (Corrective Maintenance)
+A. Đúng
+*B. Sai
+4)Theo dõi phiên bản mới của các thư viện phụ thuộc dự án và cập nhật định kỳ để ngăn ngừa lỗ hổng bảo mật, tránh các sự cố có thể xảy ra là ví dụ về bảo trì phòng ngừa (Preventive maintenance)
+*A. Đúng
+B. Sai
+
+
+Question  21 (drag-drop-2)
+Kéo đúng cặp "Loại bảo trì" với "Mục đích chính"?
+Quản lý mã
+
+1)Adaptive →
+*Thích nghi môi trường mới
+1)Preventive →
+*Ngăn ngừa lỗi tiềm ẩn
+1)Corrective →
+*Sửa lỗi
+1)Perfective →
+*Cải thiện tính năng
+
+Question  22 (drag-drop-2)
+Kéo mô tả vào đúng giai đoạn tương ứng của DevOps?
+Phân tích mã nguồn
+
+1)Coding →
+*Viết mã
+1)Building →
+*Biên dịch mã nguồn
+1)Monitoring →
+*Theo dõi hệ thống vận hành
+1)Testing →
+*Kiểm thử
+1)Deploying →
+*Triển khai lên môi trường vận hành
+
+Question  23 (drag-drop-2)
+Kéo công cụ vào đúng nhóm chức năng?
+
+1)Phân tích mã nguồn tĩnh →
+*SonarQube
+1)Container hóa →
+*Docker
+1)CI/CD pipeline →
+*Jenkins
+1)Quản lý mã nguồn →
+*Git
+
+Question  24 (drag-drop-2)
+Kéo đúng mô tả vào giai đoạn tương ứng trong quy trìnhDevOps?
+
+1)Release →
+*Phát hành sản phẩm
+1)Plan →
+*Xác định yêu cầu và lộ trình
+1)Test →
+*Kiểm thử tự động
+1)Build →
+*Biên dịch và đóng gói ứng dụng
+
+Question  25 (drag-drop-2)
+So sánh DevOps với Waterfall, DevOps với Agile, hãy kéo các đặc điểm tương ứng?
+
+1)DevOps → 
+*Triển khai liên tục, phản hồi nhanh
+
+1)Waterfall → 
+*Tuần tự từng giai đoạn, chậm đổi mới
+
+1)Agile → 
+*Tập trung vào phát triển phần mềm linh hoạt
+
+Question  26 (drag-drop-2)
+Kéo đúng mô hình phát triển phần mềm với đặc điểm phù hợp?
+
+1)Scrum →
+*Product backlog được kiểm soát bởi Product Owner
+1)Spiral →
+*Bổ sung thêm phân tích rủi ro
+1)RUP →
+*Lặp hai chiều và hướng đối tượng
+1)DevOps →
+*Tự động hóa & triển khai liên tục
+
+Question  27 (group-input)
+Điền thông tin thích hợp vào các chỗ trống trong phát biểu sau đây:
+
+Bước đầu tiên trong quy trình DevOps là ___(1)___, bước cuối cùng trong quy trình DevOps là ___(1)___. Công cụ hỗ trợ cho bước đầu tiên là ___(3)___, công cụ hỗ trợ cho bước cuối cùng là ___(4)__. DevOps giúp cải thiện thời gian phát hành phần mềm bằng cách tự động hóa quy trình build và deploy.
+
+Biết các thông tin có thể điền bbao gồm: lập kế hoạch, giám sát hệ thống vận hành, jira , elk
+
+1) ô trống (1)
+lập kế hoạch
+2) ô trống (2)
+giám sát hệ thống vận hành
+3) ô trống (3)
+jira 
+4) ô trống (4)
+elk
+
+
+Question 28 (group-input)
+Điền thông tin thích hợp vào các chỗ trống trong phát biểu sau đây:
+
+DevOps là sự kết hợp giữa __(1)___ và __(2)___, nhằm tối ưu quy trình phát triển phần mềm. Trong đó, nhóm __(3)__ chịu trách nhiệm phát triển, trong khi nhóm __(4)___ chịu trách nhiệm về cơ sở hạ tầng, triển khai ứng dụng, giám sát ứng dung vận hành và đảm bảo ứng dụng hoạt động ổn định, hiểu quả trên môi trường vận hành.
+
+Biết các thông tin có thể điền bao gồm: ops, dev, sec, kiểm thử, lập trình, phát triển, vận hành
+
+1) ô trống (1)
+dev
+2) ô trống (2)
+ops
+3) ô trống (3)
+phát triển  
+4) ô trống (4)
+vận hành
+
+Question 29 (group-input)
+Điền thông tin thích hợp vào các chỗ trống trong phát biểu sau đây: 
+
+Trong quy trình DevOps, giai đoạn ____(1)_____ bao gồm việc lập kế hoạch phát triển các chức năng và kế hoạch phát hành cho lần lặp chu trình tiếp theo. DevOps giúp rút ngắn ___(2)______ để phần mềm được phát hành nhanh hơn, và kết nối hai vai trò chính là phát triển và ____(3)_____ trong chu trình. 
+
+Biết các thông tin có thể điền bao gồm: lập kế hoạch, chu kỳ phát hành, vận hành, viết code 
+
+1)ô trống (1)
+lập kế hoạch
+2)ô trống (2)
+chu kỳ phát hành
+3)ô trống (3)
+vận hành
+
+Question 30 (group-input)
+Điền thông tin thích hợp vào các chỗ trống trong phát biểu sau đây:
+
+Bảo trì nhằm sửa lỗi được gọi là ____(1)_____. Bảo trì nhằm thích nghi với môi trường mới còn được gọi là _____(2). Bảo trì nhằm giúp phần mềm tránh được lỗi tiềm ẩn, còn được gọi là ____(3)____
+
+Biết các thông tin có thể điền bao gồm: bảo trì hiệu chỉnh, bảo trì thích nghi, bảo trì tiến hóa , bảo trì phòng ngừa
+
+1) ô trống (1)
+bảo trì hiệu chỉnh
+2) ô trống (2)
+bảo trì thích nghi
+3) ô trống (3)
+bảo trì phòng ngừa
+

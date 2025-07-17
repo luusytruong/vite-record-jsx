@@ -140,16 +140,15 @@ export function handleDragCommon(
     observer.observe(answerZone, { childList: true, subtree: multiple });
     observerManager.push(observer);
 
-    const restoredList = restore?.filter((q) => q.drag_map?.length > 0) || [];
-    restoredList.forEach((q) => {
-      const restoreItem = q.drag_map.find((r) => r.text === item.text);
-      if (!restoreItem) return;
+    const restoredQuestion = restore?.find((q) => q?.text === question.text);
+    const restoreItem = restoredQuestion?.drag_map?.find(
+      (r) => r.text === item.text
+    );
+    if (!restoreItem) return;
 
-      // log(answerZone)
-      const answer = (restoreItem.answers || [restoreItem.answer]).join(", ");
-      const placeholder = $(":scope >p", answerZone);
-      if (placeholder) placeholder.innerText = answer;
-    });
+    const answer = (restoreItem.answers || [restoreItem.answer]).join(", ");
+    const placeholder = $(":scope >p", answerZone);
+    if (placeholder) placeholder.innerText = answer;
   });
 }
 
