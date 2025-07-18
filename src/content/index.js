@@ -1,54 +1,62 @@
 import { extractMainQuestion } from "./core/extractHead.js";
 import { detectType } from "./core/detectType.js";
 import { handlers } from "./core/handlers/index.js";
-import {
-  cleanQuestion,
-  getStorage,
-  log,
-  saveToStorage,
-  sendMessage,
-} from "./core/utils.js";
+import { $, clean, debounce, getStorage, log, sendData } from "./core/utils.js";
 
 (() => {
   const isLMS =
-    location.hostname === "lms.ictu.edu.vn" || location.href.startsWith("file");
+    location.hostname === "lms.ictu.edu.vn" || location.protocol === "file:";
   if (!isLMS) return;
 
   console.clear();
-  const session = { lastIndex: 0, observers: [], restore: [], test: [] };
+  const session = { lastIdx: 0, obsManager: [], active: true };
+  const label = $(".app-version");
 
-  window.addEventListener("message", async ({ source, data }) => {
-    if (source !== window) return;
-    if (data?.source === "page-script") {
-      const question = data.payload[0];
-      session.test[question.no - 1] = question;
-      await saveToStorage("test", session.test);
+  document.addEventListener("keydown", ({ ctrlKey, code }) => {
+    if (code === "Backslash") {
+      session.active = !session.active;
+      session.active && handleMainQuestion(false);
+      label?.classList?.toggle("off", !session.active);
+    }
+    if (ctrlKey && code === "KeyC") {
+      const text = getSelection()?.toString();
+      if (text) navigator.clipboard.writeText(text).catch(console.error);
     }
   });
 
-  setInterval(async () => {
+  window.addEventListener("contextmenu", (e) => e.stopPropagation(), !0);
+
+  const handleMainQuestion = async (check = true) => {
     const { type, el } = detectType();
     if (!el) return;
 
-    session.restore = await getStorage("restore");
-
+    const restore = session.active ? await getStorage("restore") : [];
     const question = extractMainQuestion();
-    if (question.no === session.lastIndex) return;
 
-    session.observers.forEach((obs) => obs.disconnect());
-    session.observers = [];
+    if (check && session.lastIdx === question.no) return;
+    session.lastIdx = question.no;
+
+    session.obsManager.forEach((obs) => obs.disconnect());
+    session.obsManager = [];
 
     question.type = type;
     handlers[type]?.({
       el,
       question,
-      observerManager: session.observers,
+      restore,
       ...session,
     });
-    cleanQuestion(question);
-    sendMessage(question);
-    log(question);
 
-    session.lastIndex = question.no;
-  }, 1000);
+    clean(question);
+    log(question);
+    await sendData(question);
+  };
+
+  label?.addEventListener("click", () => {
+    handleMainQuestion(false);
+  });
+
+  setInterval(() => handleMainQuestion(), 1000);
+
+  handleMainQuestion();
 })();

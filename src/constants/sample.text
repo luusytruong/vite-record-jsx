@@ -1,320 +1,211 @@
-
-
 Question 1 (radio)
-Bảo trì hiệu chỉnh (Corrective Maintenance) nhằm mục đích gì?
-A. Hiệu chỉnh lại các thông tin về kế hoạch triển khai dự án
-B. Cập nhật lại bản thiết kế phần mềm
-*C. Sửa lỗi sau khi phần mềm được triển khai đến người dùng cuối
-D. Hiệu chỉnh phần mềm để nâng cao hiệu xuất trước khi phần mềm được triển khai đến người dùng cuối.
+Đơn vị kích thước nào được khuyến nghị sử dụng để đảm bảo bố cục hiển thị đúng trên các màn hình có mật độ khác nhau?
+A. px
+B. sp
+C. inch
+*D. dp
 
 Question 2 (radio)
-Mục tiêu của bảo trì phòng ngừa là gì?
-*A. Ngăn ngừa lỗi có thể phát sinh
-B. Tối ưu hóa giao diện
-C. Kiểm tra tính bảo mật
-D. Thêm chức năng mới
+Từ khóa val trong Kotlin được sử dụng để làm gì?
+A. Khai báo biến có thể thay đổi
+B. Khai báo hàm
+*C. Khai báo biến không thể thay đổi
+D. Khai báo lớp
 
 Question 3 (radio)
-Một phần mềm được đánh giá là "dễ bảo trì" khi nào?
-*A. Có cấu trúc rõ ràng, dễ hiểu, dễ thay đổi
-B. Có giao diện đẹp, được lập trình bởi nhiều người
-C. Có mã nguồn ngắn
-D. Có nhiều tính năng
+Cách khai báo biến nào sau đây trong Kotlin là hợp lệ?
+A. var hello: Int? = ""
+B. String "hello" = hello
+*C. val hello = "hello"
+D. hello: String = "hello"
 
 Question 4 (radio)
-Loại bảo trì nào liên quan đến việc thêm tính năng mới dựa trên phản hồi người dùng?
-*A. Bảo trì tiến hóa
-B. Bảo trì thích nghi
-C. Bảo trì hiệu chỉnh
-D. Bảo trì phòng ngừa
+Viết đoạn mã Kotlin để thực hiện một vòng lặp chạy qua các giá trị từ 1 đến 10 nhưng chỉ in ra các giá trị lẻ.
+A. for (i in 1..10) if (i % 2 == 0) println(i)
+B. for (i in 1..10 step 1) println(i)
+*C. for (i in 1..10 step 2) println(i)
+D. for (i in 1 until 10) if (i % 2 == 0) println(i)
 
 Question 5 (radio)
-Lập trình viên nên làm gì trước khi thay đổi mã trong quá trình bảo trì?
-A. Sửa ngay mã nguồn để tiết kiệm thời gian
-B. Đổi tên project
-C. Xóa mã cũ
-*D. Hiểu rõ nguyên nhân và tác động của thay đổi
+Viết đoạn mã lệnh để in ra các số từ 1 đến 10 nhưng bỏ qua giá trị 5?
+A. for (i in 1..10) { if (i == 5) println(i) }
+B. for (i in 1..10 step 5) println(i)
+*C. for (i in 1..10) { if (i == 5) continue; println(i) }
+D. for (i in 1..10) continue if (i == 5)
 
 Question 6 (radio)
-Các quy trình phần mềm theo lịch sử phát triển có thể chia thành mấy loai?
-A. 5
-B. 2
-*C. 4
-D. 3
+Để hiển thị rõ ràng và vừa mắt trên các màn hình có kích thước khác nhau của thiết bị di động, người lập trình cần quan tâm đến yếu tố nào?
+*A. Kích thước của các phần tử UI theo tỷ lệ
+B. Loại cảm ứng của màn hình
+C. Tốc độ mạng di động
+D. Phiên bản hệ điều hành
 
 Question 7 (radio)
-DevOps kết hợp chặt chẽ giữa ______?
-A. Kinh doanh và marketing
-*B. Phát triển và vận hành
-C. Kiểm thử và bảo trì
-D. Phân tích và thiết kế
+Phương pháp nào dưới đây là cách tiếp cận phổ biến khi phát triển ứng dụng di động Android sử dụng ngôn ngữ Java hoặc Kotlin?
+A. Cross-platform Development
+B. Hybrid Development
+*C. Native Development
+D. Web-based Development
 
 Question 8 (radio)
-Quá trình đảm bảo phần mềm hoạt động ổn định sau triển khai gọi là gì?
-*A. Vận hành phần mềm
-B. Kiểm thử phần mềm
-C. Phát triển phần mềm
-D. Thiết kế hệ thống
+Phương pháp lập trình nào giúp xây dựng ứng dụng di động chạy trên nhiều nền tảng với một mã nguồn duy nhất nhưng có thể sử dụng các thành phần gốc (native) khi cần?
+A. Web-based Development
+B. Native Development
+C. Hybrid Development
+*D. Cross-platform Development
 
 Question 9 (radio)
-Bảo trì thích nghi (Adaptive Maintenance) là gì?
-A. Loại bỏ chức năng cũ, và bổ sung thêm các chức năng mới cho phần mềm
-*B. Cập nhật phần mềm sao cho hoạt động ổn định trên môi trường mới
-C. Tối ưu thuật toán và cấu trúc dữ liệu để đáp ứng các yêu cầu thay đổi từ phía đối tác
-D. Cải thiện giao diện người dùng sao cho phù hợp các chuẩn thiết kế UI/UX
+Trong lập trình di động, khi sử dụng phương pháp Native, ứng dụng sẽ được phát triển như thế nào?
+A. Sử dụng mã nguồn web để tạo ứng dụng
+B. Phát triển ứng dụng dưới dạng ứng dụng web
+C. Phát triển một lần duy nhất cho cả Android và iOS
+*D. Phát triển riêng biệt cho mỗi hệ điều hành, tận dụng tối đa tính năng của hệ điều hành
 
 Question 10 (radio)
-Trong quy trình bảo trì phần mềm, bước đầu tiên thường là gì?
-A. Triển khai phần mềm mới
-B. Kiểm thử hệ thống
-*C. Phân tích yêu cầu thay đổi
-D. Viết mã mới
+Vòng lặp for có thể sử dụng với một khoảng giá trị không?
+A. Không, chỉ với các số nguyên
+B. Có, nhưng cần dùng thư viện bổ sung
+*C. Có thể sử dụng với một khoảng giá trị
+D. Không, chỉ với danh sách hoặc mảng
 
 Question 11 (radio)
-Yếu tố nào quan trọng nhất giúp phần mềm dễ bảo trì?
-A. Dùng nhiều thư viện ngoài
-B. Dùng ít dòng mã
-C. Nhiều file cấu hình
-*D. Có cấu trúc mã rõ ràng và được chú thích tốt
+Điểm khác biệt chính giữa XML và Jetpack Compose trong việc thiết kế giao diện là gì?
+*A. XML sử dụng cấu trúc thẻ để định nghĩa giao diện, trong khi Jetpack Compose sử dụng cú pháp Kotlin để tạo giao diện
+B. XML hỗ trợ các thuộc tính động, trong khi Jetpack Compose không hỗ trợ
+C. XML không thể được sử dụng trong ứng dụng Android, trong khi Jetpack Compose hỗ trợ tất cả các thiết bị Android
+D. XML chỉ được sử dụng trong ứng dụng Android cũ, còn Jetpack Compose chỉ hỗ trợ ứng dụng Android mới
 
 Question 12 (radio)
-Một trong các đặc điểm khác biệt quan trọng của DevOps so với quy trình phần mềm truyền thống là gì?
-A. Không cần quản lý lỗi các lỗi là không thể xảy ra khi tổ chức/doanh nghiệp áp dụng DevOps
-B. Triển khai thủ công các công đoạn trong quy trình phần mềm
-*C. Tự động hóa quy trình với sự trợ giúp của chuỗi các công cụ, công nghệ hiện đại
-D. Không cần kiểm thử phần mềm một cách nghiêm ngặt
+Trong ứng dụng Android, cách nào tốt nhất để kiểm tra bố cục giao diện trên các kích thước màn hình khác nhau?
+A. Tạo nhiều file bố cục với các độ phân giải khác nhau.
+*B. Sử dụng trình giả lập đi kèm với Android Studio và các cấu hình màn hình khác nhau.
+C. Sử dụng các phần mềm giả lập bên thứ ba.
+D. Chạy ứng dụng trên một thiết bị màn hình lớn và một thiết bị màn hình nhỏ.
 
 Question 13 (radio)
-Mô hình quy trình thác nước được giới thiệu bởi ai? vào năm nào?
-A. Frederick P. Brooks (1975)
-*B. Winston W. Royce (1970)
-C. Barry Boehm (1988)
-D. IBM (1967)
+Sau khi chạy chương trình sau biến count có giá trị bằng bao nhiêu? fun main() { var count = 0 for (i in 1 until 5) { if (i % 2 == 0) count++ } }
+A. 1
+*B. 2
+C. 3
+D. 0
 
 Question 14 (radio)
-Vận hành phần mềm theo góc nhìn của người dùng cuối là gì?
-A. Quá trình sửa lỗi trong phần mềm
-B. Quá trình cải tiến hệ thống
-*C. Cách người dùng tương tác với hệ thống để đạt mục tiêu
-D. Tìm lỗi logic
+Sau khi thực hiện đoạn mã dưới đây biến sum có giá trị bằng bao nhiêu? fun main() { var sum = 0 for (i in 1..10) { if (i % 2 == 0) { sum += i } } if(sum % 5 ==0) println(sum) }
+A. 50
+B. 40
+*C. 30
+D. 20
 
-Question 15 (checkbox)
-Các công cụ thường dùng trong DevOps là những công cụ nào?
-A. Microsoft excel, Microsoft word
-*B. Git/GitHub, GitLab, Bitbucket
-*C. Maven/Gradle, Nexus, SonarQube
-*D. Jenkins, Docker, K8s
+Question 15 (radio)
+Sau khi chạy đoạn mã sau, màn hình in ra gì? fun main() { var x = 4 while (x < 10) { val result = if (x > 3) { x += 2 x } else { x - 1 } print("$result\t") x++ } }
+*A. 6 9
+B. 6 8 10
+C. 6 8 10 12 14
+D. 6 9 12
 
-Question  16 (group-radio)
-Các phát biểu sau đúng hay sai?
-1) Scrum và Kanban thuộc loại quy trình phần mềm dự đoán (predictive processes 
-*A. Sai
-B. Đúng
-2) Scrum và Kanban thuộc loại quy trình phần mềm linh hoạt (Adaptive Processes)
-*A. Đúng
-B. Sai
-3) RUP, Spiral là các mô hình quy trình phần mềm thuộc loại quy trình dự đoán (predictive processes)
-*A. Sai
-B. Đúng
-4) RUP, Spiral là các mô hình quy trình phần mềm thuộc loại quy trình lặp (iterative processes)
-*A. Đúng
-B. Sai
+Question 16 (radio)
+Khi cài đặt Android Studio, công cụ nào cần được cài đặt để kiểm tra ứng dụng trên môi trường giả lập?
+A. SDK manager
+B. Java Runtime Environment
+C. Android Image
+*D. Android Emulator
 
-Question  17 (group-radio)
-Các phát biểu sau đúng hay sai?
-1)Bảo trì phần mềm được tiến hành trước khi phần mềm được triển khai đến môi trường người dùng
-A. Đúng
-*B. Sai
-2)Việc đảm bảo phần mềm hoạt động đúng và ổn định sau khi đưa vào sử dụng là trách nhiệm của khách hàng, và người dùng , không thuộc trách nhiệm của nhóm vận hành.
-A. Đúng
-*B. Sai
-3)Bảo trì phần mềm là quá trình duy trì và cải tiến phần mềm sau khi triển khai
-*A. Đúng
-B. Sai
-4)Một trong các lợi ích quan trọng của bảo trì phần mềm là đảm bảo phần mềm hoạt động ổn định, lâu dài, và nâng cao trải nghiệm người dùng
-*A. Đúng
-B. Sai
+Question 17 (radio)
+Cú pháp cơ bản của vòng lặp for trong Kotlin là gì?
+A. for each item in collection do { statement }
+B. for item in collection { statement }
+*C. for (item in collection) { statement }
+D. for item: collection { statement }
 
-Question  18 (group-radio)
-Các phát biểu sau đúng hay sai?
-1)Với Agile, ROI tăng, do giá trị đặc trưng của sản phẩm tăng theo thời gian
-*A. Đúng
-B. Sai
-2)DevOps có đầy đủ các lợi thế của các mô hình quy trình Agile
-*A. Đúng
-B. Sai
-3)Agile dựa trên nguyên tắc kinh tế: “The later we deliver a feature, the sooner our customers will pay us for it”.
-A. Đúng
-*B. Sai
-4)Agile dựa trên nguyên tắc kinh tế: “The sooner we deliver a feature, the sooner our customers will pay us for it”.
-*A. Đúng
-B. Sai
+Question 18 (radio)
+Viết lệnh còn thiếu vào chỗ trống _____ để đoạn mã sau in ra các số từ 10 đến 1: for (i in _____) { println(i) }
+A. 10 .. 1
+B. 10
+*C. 10 downTo 1
+D. 1..10
 
-Question 19 (group-radio)
-Các phát biểu sau đúng hay sai?
-1)Các quy trình phần mềm linh hoạt không loại bỏ được vấn đề tam giác thép
-*A. Sai
-B. Đúng
-2)Mô hình quy trình thác nước (waterfall model) loại bỏ hoàn toàn được vấn đề về tam giác thép (ion triangle)
-*A. Sai
-B. Đúng
-3)Vấn đề tam giác thép được hiểu là: sự cố định về tập yêu cầu sẽ dẫn đến lịch biểu cố định, ngân quỹ và các công nghệ cũng được cố định theo lịch biểu. Các thành viên tham gia triển khai dự án phải bám sát kế hoạch, liên tục bị thúc ép bởi deadline, chỉ cần thay đổi yêu cầu khách hàng, hoặc không hoàn thành công việc đúng tiến độ, dự án có thể dẫn đến thất bại
-*A. Đúng
-B. Sai
-4)Các quy trình phần mềm lặp không loại bỏ được vấn đề về tam giác thép
-*A. Sai
-B. Đúng
+Question 19 (radio)
+Khi thiết kế giao diện cho ứng dụng di động, cần phải làm gì để đảm bảo khả năng tương tác tốt trên màn hình có kích cỡ nhỏ?
+A. Tăng số lượng thao tác
+*B. Giảm số lượng phần tử tương tác và sử dụng biểu tượng rõ ràng
+C. Sử dụng văn bản nhỏ
+D. Sử dụng các phần tử nhỏ để tiết kiệm không gian
 
-Question 20 (group-radio)
-Các phát biểu sau đúng hay sai?
-1)Sửa lỗi chức năng tìm kiếm do trả về kết quả sai vì khi người dùng sử dụng là ví dụ về bảo trì thích nghi (Adaptive maintenance)
-A. Đúng
-*B. Sai
-2)Nâng cấp tính năng tìm kiếm để tối ưu về mặt hiệu năng là một ví dụ về bảo trì tiến hóa (evolutionary maintenance)
-A. Sai
-*B. Đúng
-3)Di chuyển ứng dụng sang hạ tầng mới (hạ tầng đám mây) là ví dụ về bảo trì sửa lỗi (Corrective Maintenance)
-A. Đúng
-*B. Sai
-4)Theo dõi phiên bản mới của các thư viện phụ thuộc dự án và cập nhật định kỳ để ngăn ngừa lỗ hổng bảo mật, tránh các sự cố có thể xảy ra là ví dụ về bảo trì phòng ngừa (Preventive maintenance)
-*A. Đúng
-B. Sai
+Question 20 (radio)
+Để phản hồi người dùng khi họ nhấn vào một nút bấm trên ứng dụng di động, lập trình viên nên làm gì?
+A. Tăng kích thước nút bấm
+*B. Đổi màu nút bấm khi nhấn
+C. Thay đổi hình nền
+D. Giảm độ phân giải màn hình
 
+Question 21 (radio)
+Công cụ nào trong Android Studio giúp kiểm tra và tối ưu tài nguyên hình ảnh cho các màn hình có mật độ khác nhau?
+A. Layout Editor
+*B. Resource Manager
+C. Lint Check
+D. Memory Profiler
 
-Question  21 (drag-drop-2)
-Kéo đúng cặp "Loại bảo trì" với "Mục đích chính"?
-Quản lý mã
+Question 22 (radio)
+Kết quả in ra của chương trình sau là gì? fun main() { var i = 0 while (i < 5) { print("$i,") i++ } }
+A. 0, 1, 2, 3, 4, 5
+B. 1, 2, 3, 4, 5
+C. 0,1,2,3,4
+*D. 0,1,2,3,4,
 
-1)Adaptive →
-*Thích nghi môi trường mới
-1)Preventive →
-*Ngăn ngừa lỗi tiềm ẩn
-1)Corrective →
-*Sửa lỗi
-1)Perfective →
-*Cải thiện tính năng
+Question 23 (radio)
+Biến category có giá trị như thế nào sau khi chạy đoạn chương trình sau: fun main() { val age = 18 val category = when { age < 13 -> "Trẻ em" age in 13 until 18 -> "Thiếu niên" age in 18..59 -> "Người trưởng thành" else -> "Người cao tuổi" } println(category) }
+A. Trẻ em
+*B. Người trưởng thành
+C. Người cao tuổi
+D. Thiếu niên
 
-Question  22 (drag-drop-2)
-Kéo mô tả vào đúng giai đoạn tương ứng của DevOps?
-Phân tích mã nguồn
+Question 24 (radio)
+Đoạn mã sau gây ra lỗi ở đâu: fun main() { val x = 5 var y = x + 2 y += 3 x += 1 println("x = $x, y = $y") }
+A. Không có lỗi, chương trình in ra x = 6, y = 10.
+B. Lỗi biên dịch tại dòng val x = 5 vì x không thể thay đổi.
+*C. Lỗi biên dịch tại dòng x += 1 vì x được khai báo là val.
+D. Lỗi tại đồng y+=3 do ý không được thay đổi giá trị.
 
-1)Coding →
-*Viết mã
-1)Building →
-*Biên dịch mã nguồn
-1)Monitoring →
-*Theo dõi hệ thống vận hành
-1)Testing →
-*Kiểm thử
-1)Deploying →
-*Triển khai lên môi trường vận hành
+Question 25 (radio)
+Yếu tố nào sau đây ảnh hưởng đến độ rõ nét của hình ảnh và văn bản trên màn hình di động?
+A. Độ phân giải
+B. Tốc độ vi xử lý
+*C. Độ phân giải và mật độ điểm ảnh của màn hình
+D. Mật độ điểm ảnh
 
-Question  23 (drag-drop-2)
-Kéo công cụ vào đúng nhóm chức năng?
+Question 26 (radio)
+Công cụ nào dưới đây được dùng để thay đổi cấu hình của máy ảo trong Android Studio?
+A. Emulator Settings
+B. VirtualBox
+*C. AVD Manager
+D. SDK Manager
 
-1)Phân tích mã nguồn tĩnh →
-*SonarQube
-1)Container hóa →
-*Docker
-1)CI/CD pipeline →
-*Jenkins
-1)Quản lý mã nguồn →
-*Git
+Question 27 (radio)
+Tại sao Kotlin được coi là null-safe?
+A. Kotlin sử dụng từ khóa null khác
+B. Kotlin không có khái niệm null
+C. Kotlin không cho phép sử dụng giá trị null
+*D. Kotlin yêu cầu khai báo rõ ràng các biến có thể null với “?”
 
-Question  24 (drag-drop-2)
-Kéo đúng mô tả vào giai đoạn tương ứng trong quy trìnhDevOps?
+Question 28 (radio)
+Một trong những ưu điểm chính của Kotlin so với Java là gì?
+A. Kotlin chỉ chạy trên Android
+B. Kotlin không hỗ trợ lập trình hướng đối tượng
+C. Mã Kotlin rõ ràng, dễ hiểu hơn với người mới học
+*D. Kotlin yêu cầu ít mã nguồn hơn và hỗ trợ cú pháp ngắn gọn
 
-1)Release →
-*Phát hành sản phẩm
-1)Plan →
-*Xác định yêu cầu và lộ trình
-1)Test →
-*Kiểm thử tự động
-1)Build →
-*Biên dịch và đóng gói ứng dụng
+Question 29 (radio)
+Biểu thức điều kiện if có thể được sử dụng như một biểu thức trả về giá trị trong Kotlin không?
+A. Không, if chỉ là một câu lệnh
+B. Có, bằng cách sử dụng từ khóa return
+*C. Có, if có thể trả về giá trị trực tiếp
+D. Không, cần phải dùng else
 
-Question  25 (drag-drop-2)
-So sánh DevOps với Waterfall, DevOps với Agile, hãy kéo các đặc điểm tương ứng?
+Question 30 (radio)
+Sau khi chạy chương trình sau giá trị của biến result bằng bao nhiêu? fun main() { val x = 10 val result = if (x > 5) { val y = x + 5 y * 2 } else { x - 3 } println(result) }
+A. 20
+*B. 30
+C. 10
+D. 7
 
-1)DevOps → 
-*Triển khai liên tục, phản hồi nhanh
-
-1)Waterfall → 
-*Tuần tự từng giai đoạn, chậm đổi mới
-
-1)Agile → 
-*Tập trung vào phát triển phần mềm linh hoạt
-
-Question  26 (drag-drop-2)
-Kéo đúng mô hình phát triển phần mềm với đặc điểm phù hợp?
-
-1)Scrum →
-*Product backlog được kiểm soát bởi Product Owner
-1)Spiral →
-*Bổ sung thêm phân tích rủi ro
-1)RUP →
-*Lặp hai chiều và hướng đối tượng
-1)DevOps →
-*Tự động hóa & triển khai liên tục
-
-Question  27 (group-input)
-Điền thông tin thích hợp vào các chỗ trống trong phát biểu sau đây:
-
-Bước đầu tiên trong quy trình DevOps là ___(1)___, bước cuối cùng trong quy trình DevOps là ___(1)___. Công cụ hỗ trợ cho bước đầu tiên là ___(3)___, công cụ hỗ trợ cho bước cuối cùng là ___(4)__. DevOps giúp cải thiện thời gian phát hành phần mềm bằng cách tự động hóa quy trình build và deploy.
-
-Biết các thông tin có thể điền bbao gồm: lập kế hoạch, giám sát hệ thống vận hành, jira , elk
-
-1) ô trống (1)
-lập kế hoạch
-2) ô trống (2)
-giám sát hệ thống vận hành
-3) ô trống (3)
-jira 
-4) ô trống (4)
-elk
-
-
-Question 28 (group-input)
-Điền thông tin thích hợp vào các chỗ trống trong phát biểu sau đây:
-
-DevOps là sự kết hợp giữa __(1)___ và __(2)___, nhằm tối ưu quy trình phát triển phần mềm. Trong đó, nhóm __(3)__ chịu trách nhiệm phát triển, trong khi nhóm __(4)___ chịu trách nhiệm về cơ sở hạ tầng, triển khai ứng dụng, giám sát ứng dung vận hành và đảm bảo ứng dụng hoạt động ổn định, hiểu quả trên môi trường vận hành.
-
-Biết các thông tin có thể điền bao gồm: ops, dev, sec, kiểm thử, lập trình, phát triển, vận hành
-
-1) ô trống (1)
-dev
-2) ô trống (2)
-ops
-3) ô trống (3)
-phát triển  
-4) ô trống (4)
-vận hành
-
-Question 29 (group-input)
-Điền thông tin thích hợp vào các chỗ trống trong phát biểu sau đây: 
-
-Trong quy trình DevOps, giai đoạn ____(1)_____ bao gồm việc lập kế hoạch phát triển các chức năng và kế hoạch phát hành cho lần lặp chu trình tiếp theo. DevOps giúp rút ngắn ___(2)______ để phần mềm được phát hành nhanh hơn, và kết nối hai vai trò chính là phát triển và ____(3)_____ trong chu trình. 
-
-Biết các thông tin có thể điền bao gồm: lập kế hoạch, chu kỳ phát hành, vận hành, viết code 
-
-1)ô trống (1)
-lập kế hoạch
-2)ô trống (2)
-chu kỳ phát hành
-3)ô trống (3)
-vận hành
-
-Question 30 (group-input)
-Điền thông tin thích hợp vào các chỗ trống trong phát biểu sau đây:
-
-Bảo trì nhằm sửa lỗi được gọi là ____(1)_____. Bảo trì nhằm thích nghi với môi trường mới còn được gọi là _____(2). Bảo trì nhằm giúp phần mềm tránh được lỗi tiềm ẩn, còn được gọi là ____(3)____
-
-Biết các thông tin có thể điền bao gồm: bảo trì hiệu chỉnh, bảo trì thích nghi, bảo trì tiến hóa , bảo trì phòng ngừa
-
-1) ô trống (1)
-bảo trì hiệu chỉnh
-2) ô trống (2)
-bảo trì thích nghi
-3) ô trống (3)
-bảo trì phòng ngừa
 

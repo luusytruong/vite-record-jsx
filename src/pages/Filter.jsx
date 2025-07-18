@@ -4,7 +4,7 @@ import parseJSON from "@/utils/parseJSON";
 import React, { useRef } from "react";
 import toast from "react-hot-toast";
 
-const Upload = () => {
+const Filter = () => {
   const ref = useRef();
   const handleChange = async () => {
     const json = parseJSON(ref.current.value);
@@ -19,7 +19,7 @@ const Upload = () => {
     else toast.error(`Lưu thất bại ${json?.length} câu`);
   };
   return (
-    <div className="flex flex-1 flex-col items-stretch justify-center p-6 bg-white rounded-2xl shadow-sm hover:shadow-lg">
+    <div className="m-4 mt-0 flex flex-1 flex-col items-stretch justify-center p-6 bg-white rounded-2xl shadow-sm hover:shadow-lg">
       <textarea
         ref={ref}
         name="upload-question"
@@ -27,7 +27,7 @@ const Upload = () => {
         placeholder="Dán câu hỏi"
       ></textarea>
       <Button
-        text="Lưu"
+        text="Bắt đầu"
         onClick={handleChange}
         className="mt-4 bg-black hover:bg-gray-800 text-white p-3 rounded-full shadow-sm hover:shadow-lg"
       />
@@ -35,4 +35,4 @@ const Upload = () => {
   );
 };
 
-export default Upload;
+export default Filter;

@@ -1,6 +1,6 @@
 // handlers/dragDrop2.js
 import { handleDragCommon } from "../utils.js";
 
-export function handleDragDrop2({ el, question, observerManager, restore }) {
-  handleDragCommon(el, question, observerManager, { restore, multiple: false });
+export function handleDragDrop2({ el, question, obsManager, restore }) {
+  handleDragCommon(el, question, obsManager, restore, false);
 }

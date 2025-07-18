@@ -18,7 +18,7 @@
 
   const restored = async () => {
     const restore = await getStorage("restore");
-    if (restore) sendMessage(restore);
+    if (restore) sendData(restore);
   };
 
   window.addEventListener("contextmenu", (e) => e.stopPropagation(), true);
@@ -55,7 +55,7 @@
     }
   });
 
-  function sendMessage(...args) {
+  function sendData(...args) {
     window.postMessage(
       {
         source: "content-script",

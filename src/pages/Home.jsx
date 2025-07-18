@@ -16,7 +16,7 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="flex flex-col gap-4 pt-0 w-full">
+    <div className="p-2 pt-0 -mt-2 flex flex-col md:flex-row md:flex-wrap w-full">
       {questions
         ?.filter((q) => q)
         ?.map((q, i) => (

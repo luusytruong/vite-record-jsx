@@ -9,7 +9,7 @@ createRoot(document.getElementById("root")).render(
     <Toaster
       position="bottom-right"
       gutter={16}
-      toastOptions={{ duration: 6000 }}
+      toastOptions={{ duration: 3000 }}
     />
     <App />
   </StrictMode>

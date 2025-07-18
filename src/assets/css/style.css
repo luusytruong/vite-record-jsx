@@ -75,3 +75,9 @@
 [role="alert"] {
     margin: 0 !important;
 }
+
+.app-version.off i {
+    animation: none;
+    background-color: #3B82F6 !important;
+    box-shadow: 0 0 3px 2px #3B82F6 !important;
+}

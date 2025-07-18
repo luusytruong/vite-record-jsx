@@ -14,12 +14,12 @@ const Question = ({ question }) => {
   return (
     <div
       ref={ref}
-      className="relative flex flex-col items-stretch p-6 rounded-2xl bg-white shadow-sm hover:shadow-lg"
+      className="m-2 md:w-[calc(100%/2-14px)] lg:w-[calc(100%/3-14px)] relative flex flex-col items-stretch p-6 rounded-2xl bg-white shadow-sm hover:shadow-xl"
     >
       <Button
         icon={Copy}
         size={16}
-        className="absolute top-1 right-1 p-3 opacity-20 hover:opacity-100 hover:bg-gray-100 hover:shadow-white hover:shadow-inner rounded-2xl"
+        className="absolute top-1.5 right-1.5 p-2.5 opacity-20 hover:opacity-100 hover:bg-gray-100 rounded-xl"
         onClick={handleCopy}
       />
       <p className="text-lg">

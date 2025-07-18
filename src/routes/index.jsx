@@ -1,7 +1,7 @@
 import MainLayout from "@/components/layouts/MainLayout";
 import Home from "@/pages/Home";
 import Settings from "@/pages/Settings";
-import Upload from "@/pages/Upload";
+import Filter from "@/pages/Filter";
 
 export const routes = [
   {
@@ -9,8 +9,8 @@ export const routes = [
     element: <MainLayout />,
     children: [
       { path: "/", element: <Home /> },
-      { path: "/settings", element: <Settings /> },
-      { path: "/upload", element: <Upload /> },
+      { path: "/setting", element: <Settings /> },
+      { path: "/filter", element: <Filter /> },
     ],
   },
 ];

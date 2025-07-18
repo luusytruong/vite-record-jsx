@@ -5,7 +5,7 @@ const Button = ({ icon: Icon, text, onClick, ...props }) => {
     <button onClick={onClick} className={cn("", props.className)}>
       {Icon && (
         <Icon
-          strokeWidth={1.3}
+          strokeWidth={1.6}
           className={cn("", props.classIcon)}
           {...(props.size ? { size: props.size } : {})}
         />

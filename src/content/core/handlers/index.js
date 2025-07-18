@@ -1,6 +1,6 @@
 import { handleRadio } from "./radio.js";
 import { handleGroupRadio } from "./groupRadio.js";
-import { handleCheckBox } from "./checkbox.js";
+import { handleCheckBox } from "./checkBox.js";
 import { handleGrouping2 } from "./grouping2.js";
 import { handleDragDrop2 } from "./dragDrop2.js";
 import { handleGroupInput } from "./groupInput.js";
