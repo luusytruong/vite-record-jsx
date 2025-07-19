@@ -6,11 +6,12 @@ const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
 const Question = ({ question }) => {
   const ref = useRef();
-  const handleCopy = (e) => {
-    copyFormat(e.target);
+  const handleCopy = () => {
+    copyFormat(ref.current);
   };
   return (
     <div
+      ref={ref}
       title="Click to copy"
       onClick={handleCopy}
       className="m-2 md:w-[calc(100%/2-14px)] lg:w-[calc(100%/3-14px)] relative flex flex-col items-stretch p-6 rounded-4xl bg-white shadow-sm hover:shadow-xl cursor-pointer active:scale-95"
