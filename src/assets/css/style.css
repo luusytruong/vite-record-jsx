@@ -19,29 +19,15 @@
 }
 
 @keyframes animate {
-    0% {
-        background-color: #3B82F6;
-        box-shadow: 0 0 3px 2px #3B82F6;
-    }
-
-    40% {
+    25% {
         background-color: #05C30C;
-        box-shadow: 0 0 3px 2px #05C30C;
+        box-shadow: 0 0 2px 2px #05C30C;
     }
 
-    60% {
-        background-color: #3B82F6;
-        box-shadow: 0 0 3px 2px #3B82F6;
-    }
-
-    100% {
+    75% {
         background-color: #05C30C;
-        box-shadow: 0 0 3px 2px #05C30C;
+        box-shadow: 0 0 6px 2px #05C30C;
     }
-}
-
-.animation-by-syluu {
-    animation: animate 0.4s ease !important;
 }
 
 .selected-hehe * {
@@ -49,19 +35,18 @@
     background-color: transparent !important;
 }
 
-.ictu-page-test__test-panel__user-info>div>div:first-child {
-    padding: 1px;
-    border-radius: 50%;
-}
-
 .app-version {
-    cursor: pointer;
     user-select: none !important;
+
+    i {
+        animation: animate 1.2s ease-in-out infinite;
+    }
 }
 
-/* p-toast {
-    display: none !important;
-} */
+
+.app-version.off i {
+    animation: none;
+}
 
 .p-toast {
     bottom: unset !important;
@@ -74,10 +59,4 @@
 
 [role="alert"] {
     margin: 0 !important;
-}
-
-.app-version.off i {
-    animation: none;
-    background-color: #3B82F6 !important;
-    box-shadow: 0 0 3px 2px #3B82F6 !important;
 }

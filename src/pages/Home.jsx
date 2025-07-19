@@ -1,18 +1,13 @@
 import Question from "@/components/common/Question";
-import { useEffect, useState } from "react";
-import { getStorage } from "@/utils/chrome";
-import toast from "react-hot-toast";
-import { sampleQuestions } from "@/constants/data";
+import { useQuestions } from "@/context/context";
+import { useEffect, useRef } from "react";
+
 const Home = () => {
-  const [questions, setQuestions] = useState([]);
+  const { questions, handleLoad } = useQuestions();
+  const ref = useRef(handleLoad);
 
   useEffect(() => {
-    getStorage("test").then((res) => {
-      setQuestions(res || sampleQuestions);
-      res
-        ? toast.success("Tải dữ liệu thành công")
-        : toast.success("Không có dữ liệu");
-    });
+    ref.current();
   }, []);
 
   return (

@@ -1,6 +1,12 @@
+import { normalize } from "./utils";
+
 export default function parseJSON(text) {
   const questions = [];
-  const lines = text.split("\n").filter((line) => line.trim());
+  const lines = text
+    ?.split("\n")
+    ?.filter((l) => l.trim())
+    ?.map((l) => normalize(l));
+  // console.log(lines?.length);
 
   let i = 0;
   while (i < lines.length) {
@@ -147,7 +153,7 @@ export default function parseJSON(text) {
         const subQuestionText = subQuestionLine.replace(/^\d+\)\s*/, "");
 
         const subQuestion = {
-          no: subQuestionNo,
+          // no: subQuestionNo,
           text: subQuestionText,
           options: [],
         };

@@ -42,7 +42,7 @@
       }
     ],
     "text": "Nhiệm vụ chính của Kiến trúc sư phần mềm gồm: (Chọn 3)",
-    "type": "checkbox",
+    "type": "check-box",
     "no": "2"
   },
   {

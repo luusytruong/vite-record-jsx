@@ -1,211 +1,181 @@
 Question 1 (radio)
-Đơn vị kích thước nào được khuyến nghị sử dụng để đảm bảo bố cục hiển thị đúng trên các màn hình có mật độ khác nhau?
-A. px
-B. sp
-C. inch
-*D. dp
+Từ khóa nào được sử dụng để định nghĩa một hàm trong Kotlin?
+A. def
+B. lambda
+*C. fun
+D. function
 
 Question 2 (radio)
-Từ khóa val trong Kotlin được sử dụng để làm gì?
-A. Khai báo biến có thể thay đổi
-B. Khai báo hàm
-*C. Khai báo biến không thể thay đổi
-D. Khai báo lớp
+Hàm nào dưới đây có cú pháp khai báo đúng trong Kotlin?
+A. fun add(a: Int, b: Int) -> Int { return a + b }
+B. def add(a: Int, b: Int): Int { return a + b }
+*C. fun add(a: Int, b: Int): Int { return a + b }
+D. function add(a: Int, b: Int): Int { return a + b }
 
 Question 3 (radio)
-Cách khai báo biến nào sau đây trong Kotlin là hợp lệ?
-A. var hello: Int? = ""
-B. String "hello" = hello
-*C. val hello = "hello"
-D. hello: String = "hello"
+Trong Kotlin, làm thế nào để khai báo một hàm với tham số mặc định?
+A. fun myFunction(a: Int?) { }
+B. fun myFunction(a: Int = Int) { }
+*C. fun myFunction(a: Int = 0) { }
+D. fun myFunction(a: Int?) { a = 0 }
 
 Question 4 (radio)
-Viết đoạn mã Kotlin để thực hiện một vòng lặp chạy qua các giá trị từ 1 đến 10 nhưng chỉ in ra các giá trị lẻ.
-A. for (i in 1..10) if (i % 2 == 0) println(i)
-B. for (i in 1..10 step 1) println(i)
-*C. for (i in 1..10 step 2) println(i)
-D. for (i in 1 until 10) if (i % 2 == 0) println(i)
+Tại sao dp được sử dụng thay vì px khi thiết kế giao diện người dùng trong Android?
+A. Để tối ưu hóa tốc độ tải của ứng dụng
+B. Để đảm bảo văn bản có thể thay đổi kích thước theo sở thích của người dùng
+C. Để tiết kiệm bộ nhớ của thiết bị
+*D. Để đảm bảo giao diện nhất quán trên các thiết bị có mật độ màn hình khác nhau
 
 Question 5 (radio)
-Viết đoạn mã lệnh để in ra các số từ 1 đến 10 nhưng bỏ qua giá trị 5?
-A. for (i in 1..10) { if (i == 5) println(i) }
-B. for (i in 1..10 step 5) println(i)
-*C. for (i in 1..10) { if (i == 5) continue; println(i) }
-D. for (i in 1..10) continue if (i == 5)
+Khi sử dụng ConstraintLayout, làm thế nào để đặt một View cách đều hai cạnh trái và phải của màn hình?
+*A. Sử dụng ràng buộc constraintStart_toStartOf và constraintEnd_toEndOf
+B. Sử dụng padding
+C. Sử dụng layout_gravity
+D. Sử dụng layout_margin
 
 Question 6 (radio)
-Để hiển thị rõ ràng và vừa mắt trên các màn hình có kích thước khác nhau của thiết bị di động, người lập trình cần quan tâm đến yếu tố nào?
-*A. Kích thước của các phần tử UI theo tỷ lệ
-B. Loại cảm ứng của màn hình
-C. Tốc độ mạng di động
-D. Phiên bản hệ điều hành
+Nếu muốn thêm một đường bo viền xung quanh một View trong Android, phương pháp nào là thích hợp nhất?
+A. Sử dụng android:margin
+B. Sử dụng android:elevation
+C. Sử dụng android:padding
+*D. Sử dụng android:background với shape trong drawable
 
 Question 7 (radio)
-Phương pháp nào dưới đây là cách tiếp cận phổ biến khi phát triển ứng dụng di động Android sử dụng ngôn ngữ Java hoặc Kotlin?
-A. Cross-platform Development
-B. Hybrid Development
-*C. Native Development
-D. Web-based Development
+Khi có nhiều thành phần View trong FrameLayout. Làm thế nào để thành phần View thứ hai che phủ thành phần View thứ nhất?
+A. Thêm View con thứ nhất sau cùng trong cấu trúc XML
+B. Đặt thuộc tính android:elevation cho View thứ nhất
+*C. View con thứ hai được khai báo sau View con thứ nhất trong XML
+D. Đặt android:layout_margin cho View thứ hai
 
 Question 8 (radio)
-Phương pháp lập trình nào giúp xây dựng ứng dụng di động chạy trên nhiều nền tảng với một mã nguồn duy nhất nhưng có thể sử dụng các thành phần gốc (native) khi cần?
-A. Web-based Development
-B. Native Development
-C. Hybrid Development
-*D. Cross-platform Development
+Khi sử dụng LinearLayout với hướng ngang (horizontal), cần làm gì để các thành phần View căn giữa theo chiều dọc của bố cục?
+A. android:layout_weight="1"
+B. android:padding="center"
+C. android:gravity="vertical"
+*D. android:layout_gravity="center"
 
 Question 9 (radio)
-Trong lập trình di động, khi sử dụng phương pháp Native, ứng dụng sẽ được phát triển như thế nào?
-A. Sử dụng mã nguồn web để tạo ứng dụng
-B. Phát triển ứng dụng dưới dạng ứng dụng web
-C. Phát triển một lần duy nhất cho cả Android và iOS
-*D. Phát triển riêng biệt cho mỗi hệ điều hành, tận dụng tối đa tính năng của hệ điều hành
+Để đặt một Button ở dưới một ImageView (@id/imageView) trong ConstraintLayout và cách ImageView 20dp, cách nào sau đây là đúng?
+A. layout_constraintTop_toTopOf="parent"
+B. layout_constraintBottom_toBottomOf="parent"
+C. layout_constraintBottom_toTopOf="@id/imageView"
+*D. layout_constraintTop_toBottomOf="@id/imageView" và layout_marginTop="20dp"
 
 Question 10 (radio)
-Vòng lặp for có thể sử dụng với một khoảng giá trị không?
-A. Không, chỉ với các số nguyên
-B. Có, nhưng cần dùng thư viện bổ sung
-*C. Có thể sử dụng với một khoảng giá trị
-D. Không, chỉ với danh sách hoặc mảng
+Cần làm gì để các View trong LinearLayout phân chia đều khoảng không gian theo chiều ngang?
+*A. android:layout_weight="1"
+B. android:layout_weight="0"
+C. android:layout_width="wrap_content"
+D. android:padding="0dp"
 
 Question 11 (radio)
-Điểm khác biệt chính giữa XML và Jetpack Compose trong việc thiết kế giao diện là gì?
-*A. XML sử dụng cấu trúc thẻ để định nghĩa giao diện, trong khi Jetpack Compose sử dụng cú pháp Kotlin để tạo giao diện
-B. XML hỗ trợ các thuộc tính động, trong khi Jetpack Compose không hỗ trợ
-C. XML không thể được sử dụng trong ứng dụng Android, trong khi Jetpack Compose hỗ trợ tất cả các thiết bị Android
-D. XML chỉ được sử dụng trong ứng dụng Android cũ, còn Jetpack Compose chỉ hỗ trợ ứng dụng Android mới
+Trong hệ thống phân cấp View của Android, View nào sau đây có thể chứa các View khác?
+A. TextView
+B. ImageView
+C. Button
+*D. ViewGroup
 
 Question 12 (radio)
-Trong ứng dụng Android, cách nào tốt nhất để kiểm tra bố cục giao diện trên các kích thước màn hình khác nhau?
-A. Tạo nhiều file bố cục với các độ phân giải khác nhau.
-*B. Sử dụng trình giả lập đi kèm với Android Studio và các cấu hình màn hình khác nhau.
-C. Sử dụng các phần mềm giả lập bên thứ ba.
-D. Chạy ứng dụng trên một thiết bị màn hình lớn và một thiết bị màn hình nhỏ.
+Đoạn mã dưới đây sẽ in ra kết quả gì? fun calculate(x: Int, y: Int): Int { var result = x + y if (result % 2 == 0) { result *= 2 } return result } fun main() { val a = 3 val b = 5 val output = calculate(a, b) println(output) }
+A. Lỗi truyền tham số
+B. 8
+C. 10
+*D. 16
 
 Question 13 (radio)
-Sau khi chạy chương trình sau biến count có giá trị bằng bao nhiêu? fun main() { var count = 0 for (i in 1 until 5) { if (i % 2 == 0) count++ } }
-A. 1
-*B. 2
-C. 3
-D. 0
+Sau khi thực hiện chương trình sau, biến result có giá trị bằng bao nhiêu? fun calculate(a: Int, b: Int = 3, operation: (Int, Int) -> Int): Int { return operation(a, b) } fun main() { val result = calculate(4) { x, y -> x * y - y } println(result) }
+*A. 9
+B. 12
+C. 8
+D. Lỗi biên dịch
 
 Question 14 (radio)
-Sau khi thực hiện đoạn mã dưới đây biến sum có giá trị bằng bao nhiêu? fun main() { var sum = 0 for (i in 1..10) { if (i % 2 == 0) { sum += i } } if(sum % 5 ==0) println(sum) }
-A. 50
-B. 40
-*C. 30
-D. 20
+Điền vào chỗ trống ____ để hoàn thành đoạn mã, tạo lớp con Dog kế thừa từ lớp cha Animal và sử dụng thuộc tính name trong lớp con: open class Animal(val name: String) class Dog ____ { fun printName() { println("The dog's name is $name") } } fun main() { val dog = Dog("Buddy") dog.printName() }
+*A. (name: String) : Animal(name)
+B. (name: String, age: Int)
+C. (name: String) : Animal(name), age: Int
+D. (name: String)
 
 Question 15 (radio)
-Sau khi chạy đoạn mã sau, màn hình in ra gì? fun main() { var x = 4 while (x < 10) { val result = if (x > 3) { x += 2 x } else { x - 1 } print("$result\t") x++ } }
-*A. 6 9
-B. 6 8 10
-C. 6 8 10 12 14
-D. 6 9 12
+Sau khi chạy chương trình sau, màn hình in ra gì? class Student { var name: String = "Chưa đặt tên" get() = field.uppercase() set(value) { field = if (value.isNotBlank()) value else "Không hợp lệ" } var age: Int = 18 set(value) { field = if (value in 0..150) value else 18 } } fun main() { val student = Student() student.name = "Nam" student.age = 200 println("${student.name}, ${student.age} tuổi") }
+A. Không hợp lệ, 18 tuổi
+B. Nam, 18 tuổi
+C. NAM, 200 tuổi
+*D. NAM, 18 tuổi
 
 Question 16 (radio)
-Khi cài đặt Android Studio, công cụ nào cần được cài đặt để kiểm tra ứng dụng trên môi trường giả lập?
-A. SDK manager
-B. Java Runtime Environment
-C. Android Image
-*D. Android Emulator
+Cú pháp nào dưới đây là đúng để tạo một lớp dữ liệu trong Kotlin?
+A. class MyDataClass()
+B. data MyDataClass()
+*C. data class MyDataClass()
+D. class MyDataClass: Data()
 
 Question 17 (radio)
-Cú pháp cơ bản của vòng lặp for trong Kotlin là gì?
-A. for each item in collection do { statement }
-B. for item in collection { statement }
-*C. for (item in collection) { statement }
-D. for item: collection { statement }
+Trong Android, để một View lấp đầy toàn bộ chiều rộng của bố cục cha thì cần đặt giá trị nào cho thuộc tính layout_width?
+A. fill_width
+B. wrap_content
+C. match_screen
+*D. match_parent
 
 Question 18 (radio)
-Viết lệnh còn thiếu vào chỗ trống _____ để đoạn mã sau in ra các số từ 10 đến 1: for (i in _____) { println(i) }
-A. 10 .. 1
-B. 10
-*C. 10 downTo 1
-D. 1..10
+Làm thế nào để đặt thành phần View1 phía trên thành phần View2 (@+id/view2) trong ConstraintLayout?
+*A. app:layout_constraintBottom_toTopOf="@+id/view2"
+B. app:layout_marginBottom="16dp"
+C. app:layout_constraintTop_toBottomOf="@+id/view2"
+D. app:layout_constraintBottom_toBottomOf="@+id/view2"
 
 Question 19 (radio)
-Khi thiết kế giao diện cho ứng dụng di động, cần phải làm gì để đảm bảo khả năng tương tác tốt trên màn hình có kích cỡ nhỏ?
-A. Tăng số lượng thao tác
-*B. Giảm số lượng phần tử tương tác và sử dụng biểu tượng rõ ràng
-C. Sử dụng văn bản nhỏ
-D. Sử dụng các phần tử nhỏ để tiết kiệm không gian
+Làm thế nào để sử dụng FrameLayout trong Android tạo giao diện có một ảnh ở đầu dòng và một checkbox ở cuối dòng?
+A. Sử dụng layout_marginTop cho ảnh và layout_marginBottom cho checkbox
+B. Chồng ảnh lên checkbox bằng cách sử dụng layout_width và layout_height
+C. Chỉ cần thêm ảnh và checkbox vào FrameLayout mà không cần điều chỉnh gì thêm
+*D. Đặt ảnh và checkbox vào FrameLayout, sử dụng layout_gravity để căn chỉnh.
 
 Question 20 (radio)
-Để phản hồi người dùng khi họ nhấn vào một nút bấm trên ứng dụng di động, lập trình viên nên làm gì?
-A. Tăng kích thước nút bấm
-*B. Đổi màu nút bấm khi nhấn
-C. Thay đổi hình nền
-D. Giảm độ phân giải màn hình
+Để một View có thể chiếm nhiều không gian hơn các View khác trong cùng một LinearLayout, cần phải điều chỉnh thuộc tính nào?
+*A. android:layout_weight
+B. android:layout_height
+C. android:layout_gravity
+D. android:layout_margin
 
 Question 21 (radio)
-Công cụ nào trong Android Studio giúp kiểm tra và tối ưu tài nguyên hình ảnh cho các màn hình có mật độ khác nhau?
-A. Layout Editor
-*B. Resource Manager
-C. Lint Check
-D. Memory Profiler
+Để định nghĩa một LinearLayout theo chiều ngang, dòng lệnh nào sau đây là đúng?
+A. android:gravity="horizontal"
+*B. android:orientation="horizontal"
+C. android:orientation="vertical"
+D. android:layout_gravity="horizontal"
 
 Question 22 (radio)
-Kết quả in ra của chương trình sau là gì? fun main() { var i = 0 while (i < 5) { print("$i,") i++ } }
-A. 0, 1, 2, 3, 4, 5
-B. 1, 2, 3, 4, 5
-C. 0,1,2,3,4
-*D. 0,1,2,3,4,
+Điền vào chỗ trống __ để gọi hàm introduce của lớp Person trong lớp con Student: open class Person(val name: String) { open fun introduce() { println("Hi, I'm $name") } } class Student(name: String) : Person(name) { override fun introduce() { println("Hi, I'm $name and I'm a student") } } fun main() { val student = Student("Lan") ___ }
+*A. student.introduce()
+B. Lan.introduce()
+C. person.introduce()
+D. Student.introduce()
 
 Question 23 (radio)
-Biến category có giá trị như thế nào sau khi chạy đoạn chương trình sau: fun main() { val age = 18 val category = when { age < 13 -> "Trẻ em" age in 13 until 18 -> "Thiếu niên" age in 18..59 -> "Người trưởng thành" else -> "Người cao tuổi" } println(category) }
-A. Trẻ em
-*B. Người trưởng thành
-C. Người cao tuổi
-D. Thiếu niên
+Viết biểu thức lambda cho phép nhân đôi một số nguyên?
+*A. val double = { x: Int -> x * 2 }
+B. val double = { x: Int -> x + 2 }
+C. val double = { x: Int = x * 2 }
+D. val double = { x: Int -> x / 2 }
 
 Question 24 (radio)
-Đoạn mã sau gây ra lỗi ở đâu: fun main() { val x = 5 var y = x + 2 y += 3 x += 1 println("x = $x, y = $y") }
-A. Không có lỗi, chương trình in ra x = 6, y = 10.
-B. Lỗi biên dịch tại dòng val x = 5 vì x không thể thay đổi.
-*C. Lỗi biên dịch tại dòng x += 1 vì x được khai báo là val.
-D. Lỗi tại đồng y+=3 do ý không được thay đổi giá trị.
+Khi sử dụng FrameLayout, các View con sẽ được xếp chồng lên nhau. Vậy làm thế nào để căn chỉnh một View con nằm ở góc dưới bên phải?
+A. Sử dụng android:layout_gravity="center"
+B. Sử dụng android:layout_margin="right|bottom"
+*C. Sử dụng android:layout_gravity="bottom|end"
+D. Sử dụng android:padding="bottom"
 
 Question 25 (radio)
-Yếu tố nào sau đây ảnh hưởng đến độ rõ nét của hình ảnh và văn bản trên màn hình di động?
-A. Độ phân giải
-B. Tốc độ vi xử lý
-*C. Độ phân giải và mật độ điểm ảnh của màn hình
-D. Mật độ điểm ảnh
+Nếu muốn hiển thị nhiều hình ảnh xếp chồng lên nhau trong cùng một vùng trên màn hình, Layout nào nên được sử dụng?
+A. LinearLayout với hướng dọc
+B. RelativeLayout
+C. GridLayout
+*D. FrameLayout
 
 Question 26 (radio)
-Công cụ nào dưới đây được dùng để thay đổi cấu hình của máy ảo trong Android Studio?
-A. Emulator Settings
-B. VirtualBox
-*C. AVD Manager
-D. SDK Manager
-
-Question 27 (radio)
-Tại sao Kotlin được coi là null-safe?
-A. Kotlin sử dụng từ khóa null khác
-B. Kotlin không có khái niệm null
-C. Kotlin không cho phép sử dụng giá trị null
-*D. Kotlin yêu cầu khai báo rõ ràng các biến có thể null với “?”
-
-Question 28 (radio)
-Một trong những ưu điểm chính của Kotlin so với Java là gì?
-A. Kotlin chỉ chạy trên Android
-B. Kotlin không hỗ trợ lập trình hướng đối tượng
-C. Mã Kotlin rõ ràng, dễ hiểu hơn với người mới học
-*D. Kotlin yêu cầu ít mã nguồn hơn và hỗ trợ cú pháp ngắn gọn
-
-Question 29 (radio)
-Biểu thức điều kiện if có thể được sử dụng như một biểu thức trả về giá trị trong Kotlin không?
-A. Không, if chỉ là một câu lệnh
-B. Có, bằng cách sử dụng từ khóa return
-*C. Có, if có thể trả về giá trị trực tiếp
-D. Không, cần phải dùng else
-
-Question 30 (radio)
-Sau khi chạy chương trình sau giá trị của biến result bằng bao nhiêu? fun main() { val x = 10 val result = if (x > 5) { val y = x + 5 y * 2 } else { x - 3 } println(result) }
-A. 20
-*B. 30
-C. 10
-D. 7
-
-
+Cho đoạn mã sau: class SanPham(val ten: String = "Không xác định", val gia: Double = 0.0) { fun thongTin() { println("Tên sản phẩm: $ten, Giá: $gia") } } fun main() { val sp = SanPham() sp.thongTin() } Kết quả chạy của đoạn mã trên là gì?
+A. Lỗi biên dịch
+B. Tên sản phẩm: , Giá: 0.0
+C. Tên sản phẩm: Không xác định
+*D. Tên sản phẩm: Không xác định, Giá: 0.0
