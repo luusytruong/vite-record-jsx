@@ -8,7 +8,7 @@ import { QuestionProvider } from "./context/QuestionProvider";
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <Toaster
-      position="bottom-right"
+      position="bottom-center"
       gutter={16}
       toastOptions={{ duration: 4000 }}
     />

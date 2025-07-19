@@ -26,7 +26,7 @@ export const sampleQuestions = [
     no: "2",
     text: "Cho biết đây là mô hình màu nào?",
     img_src:
-      "/dist/image.png",
+      "https://images4.alphacoders.com/128/thumb-1920-1287807.jpg",
     options: [
       {
         is_correct: false,

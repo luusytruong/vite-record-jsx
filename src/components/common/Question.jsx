@@ -1,6 +1,4 @@
 import { cn } from "@/utils/formatter";
-import Button from "./Button";
-import { Copy } from "lucide-react";
 import { useRef } from "react";
 import { copyFormat } from "@/utils/utils";
 
@@ -8,20 +6,15 @@ const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
 const Question = ({ question }) => {
   const ref = useRef();
-  const handleCopy = () => {
-    copyFormat(ref.current);
+  const handleCopy = (e) => {
+    copyFormat(e.target);
   };
   return (
     <div
-      ref={ref}
-      className="m-2 md:w-[calc(100%/2-14px)] lg:w-[calc(100%/3-14px)] relative flex flex-col items-stretch p-6 rounded-2xl bg-white shadow-sm hover:shadow-xl"
+      title="Click to copy"
+      onClick={handleCopy}
+      className="m-2 md:w-[calc(100%/2-14px)] lg:w-[calc(100%/3-14px)] relative flex flex-col items-stretch p-6 rounded-4xl bg-white shadow-sm hover:shadow-xl cursor-pointer active:scale-95"
     >
-      <Button
-        icon={Copy}
-        size={16}
-        className="absolute top-1.5 right-1.5 p-2.5 opacity-20 hover:opacity-100 hover:bg-gray-100 rounded-xl"
-        onClick={handleCopy}
-      />
       <p className="text-lg">
         Question {question?.no}
         <span> ({question?.type})</span>

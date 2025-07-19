@@ -93,11 +93,11 @@ const Filter = () => {
 
   return (
     <div className="flex w-full p-4 pt-0">
-      <div className="w-full flex flex-1 flex-col items-stretch justify-center p-6 bg-white rounded-2xl shadow-sm hover:shadow-lg">
+      <div className="w-full flex flex-1 flex-col items-stretch justify-center p-4 bg-white rounded-4xl shadow-sm hover:shadow-lg">
         <textarea
           ref={ref}
           name="upload-question"
-          className="flex-1 resize-none outline-none"
+          className="flex-1 resize-none outline-none m-2"
           placeholder="Dán câu hỏi"
         ></textarea>
         <div className="flex flex-col gap-4 items-stretch pt-4">
