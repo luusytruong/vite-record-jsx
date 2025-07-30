@@ -2,7 +2,7 @@
 import { extractSubQuestion } from "../extractHead.js";
 import { $$, handleQuestion } from "../utils.js";
 
-export function handleGroupRadio({ el, question, restore }) {
+export async function handleGroupRadio({ el, question, restore }) {
   const subQuestions = $$(".question-type-group-radio__element", el);
   const restoredSubQuestions =
     restore

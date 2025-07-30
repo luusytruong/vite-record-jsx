@@ -1,7 +1,7 @@
 // handlers/groupInput.js
 import { $$, getText, sendData, debounce, normalize } from "../utils.js";
 
-export function handleGroupInput({ el, question, restore }) {
+export async function handleGroupInput({ el, question, restore }) {
   const labels = $$("label", el);
   const inputs = $$("input", el);
   const debounceSend = debounce(async () => await sendData(question));
@@ -11,7 +11,8 @@ export function handleGroupInput({ el, question, restore }) {
   );
   const restoredAnswers = restoredQuestion?.input_answers || [];
 
-  labels?.forEach((label, i) => {
+  for (let i = 0; i < labels.length; i++) {
+    const label = labels[i];
     const input = inputs[i];
     const text = getText(label).replace(/^\d+\)\s*/, "");
     const answer = { text, value: input?.value || "" };
@@ -27,5 +28,5 @@ export function handleGroupInput({ el, question, restore }) {
       input.value = restored.value;
       input.dispatchEvent(new Event("input", { bubbles: true }));
     }
-  });
+  }
 }

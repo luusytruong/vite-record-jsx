@@ -1,21 +1,25 @@
 import { extractMainQuestion } from "./core/extractHead.js";
 import { detectType } from "./core/detectType.js";
 import { handlers } from "./core/handlers/index.js";
-import { $, clean, debounce, getStorage, log, sendData } from "./core/utils.js";
+import {$, clean, getStorage, log, sendData, setStorage} from "./core/utils.js";
 
-(() => {
-  const isLMS =
-    location.hostname === "lms.ictu.edu.vn" || location.protocol === "file:";
+(async () => {
+  const isLMS = location.hostname === "lms.ictu.edu.vn" || location.protocol === "file:";
   if (!isLMS) return;
 
   console.clear();
   const session = { lastIdx: 0, obsManager: [], active: true };
   const label = $(".app-version");
+  
+  const status = await getStorage("status");
+  session.active = status !== false;
+  label?.classList?.toggle("off", !session.active);
 
-  document.addEventListener("keydown", ({ ctrlKey, code }) => {
+  document.addEventListener("keydown",async ({ ctrlKey, code }) => {
     if (code === "Backslash") {
       session.active = !session.active;
-      session.active && handleMainQuestion(false);
+      handleMainQuestion(false);
+      await setStorage("status", session.active).then((res) =>log(res && session.active ? "on" : "off"))
       label?.classList?.toggle("off", !session.active);
     }
     if (ctrlKey && code === "KeyC") {
@@ -40,12 +44,7 @@ import { $, clean, debounce, getStorage, log, sendData } from "./core/utils.js";
     session.obsManager = [];
 
     question.type = type;
-    handlers[type]?.({
-      el,
-      question,
-      restore,
-      ...session,
-    });
+    handlers[type]?.({ el, question, restore, ...session });
 
     clean(question);
     log(question);
@@ -56,7 +55,7 @@ import { $, clean, debounce, getStorage, log, sendData } from "./core/utils.js";
     handleMainQuestion(false);
   });
 
-  setInterval(() => handleMainQuestion(), 1000);
+  setInterval(() => handleMainQuestion(), 2000);
 
   handleMainQuestion();
 })();

@@ -22,7 +22,7 @@ export const extractNumber = (str) =>
 export const isAnswered = (text) => text && !text.startsWith("Kéo và thả");
 export const getText = (el) => normalize(el?.innerText || "");
 
-export function handleQuestion({
+export async function handleQuestion({
   el,
   question,
   restore,
@@ -129,111 +129,16 @@ export function handleDragCommon(
     const restoreItem = restoredQuestion?.drag_map?.find(
       (r) => r.text === item.text
     );
-    if (!restoreItem) return;
 
-    const answers = restoreItem.answers || [restoreItem.answer];
     const placeholder = $(":scope >p", answerZone);
-    if (placeholder) placeholder.innerText = answers.join(", ");
 
-    // answers?.forEach((answer) => {
-    //   const candidate = candidates.find((c) => getText(c) === answer);
-    //   if (!candidate) return;
-    //   log("Simulate drag and drop", candidate, answerZone);
-    //   simulateDragAndDrop(candidate, answerZone);
-    //   simulateDragDrop(candidate, answerZone);
-    // });
+    if (restoreItem && placeholder) {
+      const answers = restoreItem.answers || [restoreItem.answer];
+      placeholder.innerText = answers.join(", ");
+    } else if (!restoreItem && placeholder) {
+      placeholder.innerText = "Kéo và thả đáp án vào đây";
+    }
   });
-}
-
-export async function simulateDragDrop(draggableElement, targetElement) {
-  const getCoords = (el) => {
-    const rect = el.getBoundingClientRect();
-    return {
-      x: rect.left + rect.width / 2,
-      y: rect.top + rect.height / 2,
-    };
-  };
-
-  const draggableCoords = getCoords(draggableElement);
-  const targetCoords = getCoords(targetElement);
-
-  // Mousedown
-  draggableElement.dispatchEvent(
-    new MouseEvent("mousedown", {
-      bubbles: true,
-      cancelable: true,
-      clientX: draggableCoords.x,
-      clientY: draggableCoords.y,
-    })
-  );
-
-  // Mousemove (để bắt đầu kéo)
-  document.dispatchEvent(
-    new MouseEvent("mousemove", {
-      bubbles: true,
-      cancelable: true,
-      clientX: draggableCoords.x + 10, // Di chuyển một chút để kích hoạt kéo
-      clientY: draggableCoords.y + 10,
-    })
-  );
-
-  // Series of mousemove to target
-  const steps = 10;
-  for (let i = 1; i <= steps; i++) {
-    const clientX =
-      draggableCoords.x + (targetCoords.x - draggableCoords.x) * (i / steps);
-    const clientY =
-      draggableCoords.y + (targetCoords.y - draggableCoords.y) * (i / steps);
-    document.dispatchEvent(
-      new MouseEvent("mousemove", {
-        bubbles: true,
-        cancelable: true,
-        clientX: clientX,
-        clientY: clientY,
-      })
-    );
-    // Optional: Add a small delay for more realistic simulation
-    await new Promise((resolve) => setTimeout(resolve, 100));
-  }
-
-  // Mouseup
-  document.dispatchEvent(
-    new MouseEvent("mouseup", {
-      bubbles: true,
-      cancelable: true,
-      clientX: targetCoords.x,
-      clientY: targetCoords.y,
-    })
-  );
-}
-
-export function simulateDragAndDrop(sourceEl, targetEl) {
-  const rectSource = sourceEl.getBoundingClientRect();
-  const rectTarget = targetEl.getBoundingClientRect();
-  log("called");
-  sourceEl.dispatchEvent(
-    new MouseEvent("mousedown", {
-      bubbles: true,
-      clientX: rectSource.x + rectSource.width / 2,
-      clientY: rectSource.y + rectSource.height / 2,
-    })
-  );
-
-  targetEl.dispatchEvent(
-    new MouseEvent("mousemove", {
-      bubbles: true,
-      clientX: rectTarget.x + rectTarget.width / 2,
-      clientY: rectTarget.y + rectTarget.height / 2,
-    })
-  );
-
-  targetEl.dispatchEvent(
-    new MouseEvent("mouseup", {
-      bubbles: true,
-      clientX: rectTarget.x + rectTarget.width / 2,
-      clientY: rectTarget.y + rectTarget.height / 2,
-    })
-  );
 }
 
 export function clean(question) {
