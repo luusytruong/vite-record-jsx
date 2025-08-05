@@ -54,6 +54,7 @@ export async function handleQuestion({
     const handleChange = () => {
       if (isRadio) options.forEach((opt) => (opt.is_correct = false));
       answer.is_correct = input.checked;
+      group.classList.remove("vite-record");
       debounceSend();
     };
 

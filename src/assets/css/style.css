@@ -47,12 +47,12 @@
 }
 
 .cursor .vite-record {
-    color: unset !important;
+    color: inherit !important;
     cursor: grab !important;
     cursor: -webkit-grab !important;
 
     * {
-        color: unset !important;
+        color: inherit !important;
         cursor: grab !important;
         cursor: -webkit-grab !important;
     }
