@@ -19,6 +19,7 @@ export async function handleGroupRadio({ el, question, restore }) {
       isRadio: true,
       parentQuestion: question,
       restore: restoredSubQuestions,
+      multiple: true,
     });
     question.sub_questions.push(subQuestionSchema);
   }

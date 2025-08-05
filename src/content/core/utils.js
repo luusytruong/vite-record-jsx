@@ -28,8 +28,9 @@ export async function handleQuestion({
   restore,
   isRadio = false,
   parentQuestion = null,
+  multiple = false,
 }) {
-  const groups = $$(".mdc-form-field", el);
+  const groups = $$(multiple ? "mat-radio-button" : ".mdc-form-field", el);
   const options = [];
 
   const restoredQuestion = restore?.find(
@@ -50,17 +51,19 @@ export async function handleQuestion({
     if (text) answer.text = text;
     if (img?.src) answer.img_src = img.src;
 
-    input?.addEventListener("change", () => {
+    const handleChange = () => {
       if (isRadio) options.forEach((opt) => (opt.is_correct = false));
       answer.is_correct = input.checked;
       debounceSend();
-    });
+    };
+
+    input?.addEventListener("change", handleChange);
 
     const restored = restoredAnswers.find((r) => normalize(r.text) === text);
     if (restored && restored.is_correct && !input.checked) {
-      input.click();
-      answer.is_correct = input.checked;
-      input.dispatchEvent(new Event("change", { bubbles: true }));
+      group.classList.add("vite-record");
+    } else {
+      group.classList.remove("vite-record");
     }
 
     options.push(answer);
@@ -219,4 +222,32 @@ export async function getStorage(key) {
   } catch {
     return null;
   }
+}
+
+export function bindEvents(app, settings, handleMainQuestion, label) {
+  document.addEventListener("keydown", async ({ ctrlKey, code }) => {
+    if (ctrlKey && code === "KeyC") {
+      const text = getSelection()?.toString();
+      if (text) navigator.clipboard.writeText(text).catch(console.error);
+    }
+
+    if (code === "ShiftRight") {
+      app.active = !app.active;
+      handleMainQuestion(false);
+      await setStorage("settings", { ...settings, toggle: app.active }).then(
+        (res) => log(res && app.active ? "on" : "off")
+      );
+      label?.classList?.toggle("on", app.active);
+    }
+
+    if (code === "Slash") {
+      app.mode = app.mode === "cursor" ? "color" : "cursor";
+      document.body.classList.toggle("cursor", app.mode === "cursor");
+      await setStorage("settings", { ...settings, mode: app.mode }).then(
+        (res) => log(res ? "mode changed" : "mode not changed")
+      );
+    }
+  });
+
+  window.addEventListener("contextmenu", (e) => e.stopPropagation(), true);
 }

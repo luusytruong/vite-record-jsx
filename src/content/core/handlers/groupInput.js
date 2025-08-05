@@ -1,6 +1,7 @@
 // handlers/groupInput.js
 import { $$, getText, sendData, debounce, normalize } from "../utils.js";
 
+const eventManager = new WeakMap();
 export async function handleGroupInput({ el, question, restore }) {
   const labels = $$("label", el);
   const inputs = $$("input", el);
@@ -24,9 +25,19 @@ export async function handleGroupInput({ el, question, restore }) {
     });
 
     const restored = restoredAnswers.find((r) => normalize(r?.text) === text);
-    if (restored?.value) {
-      input.value = restored.value;
-      input.dispatchEvent(new Event("input", { bubbles: true }));
-    }
+
+    const handleFocus = async () => {
+      if (restored?.value) {
+        await navigator.clipboard.writeText(restored.value);
+        input.placeholder = restored.value;
+      }
+    };
+
+    const old = eventManager.get(input);
+    if (old) input?.removeEventListener("focus", old);
+    input?.addEventListener("focus", handleFocus);
+    eventManager.set(input, handleFocus);
+
+    input?.addEventListener("blur", () => (input.placeholder = ""));
   }
 }

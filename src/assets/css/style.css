@@ -19,33 +19,18 @@
 }
 
 @keyframes animate {
-    25% {
-        background-color: #05C30C;
-        box-shadow: 0 0 2px 2px #05C30C;
-    }
-
-    75% {
+    50% {
         background-color: #05C30C;
         box-shadow: 0 0 6px 2px #05C30C;
     }
 }
 
-.selected-hehe * {
-    color: #343dff !important;
-    background-color: transparent !important;
-}
-
 .app-version {
     user-select: none !important;
-
-    i {
-        animation: animate 1.2s ease-in-out infinite;
-    }
 }
 
-
-.app-version.off i {
-    animation: none;
+.app-version.on i {
+    animation: animate 0.8s ease-in-out infinite;
 }
 
 .p-toast {
@@ -59,4 +44,31 @@
 
 [role="alert"] {
     margin: 0 !important;
+}
+
+.cursor .vite-record {
+    color: unset !important;
+    cursor: grab !important;
+    cursor: -webkit-grab !important;
+
+    * {
+        color: unset !important;
+        cursor: grab !important;
+        cursor: -webkit-grab !important;
+    }
+
+    ::before,
+    ::after {
+        cursor: grab !important;
+        cursor: -webkit-grab !important;
+    }
+}
+
+
+.vite-record {
+    color: #343dff !important;
+
+    * {
+        color: #343dff !important;
+    }
 }
