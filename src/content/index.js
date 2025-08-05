@@ -16,26 +16,39 @@ import {
   if (!isLMS) return;
 
   console.clear();
-  const app = { lastIdx: 0, obsManager: [], active: true, mode: "cursor" };
-  const label = $(".app-version");
-
+  const app = { lastQuestion: {}, obsManager: [], active: true, mode: "cur" };
   const settings = await getStorage("settings");
-  app.active = settings?.toggle !== false;
-  app.mode = settings?.mode || "cursor";
+  const label = $(".app-version");
+  const eventManager = new WeakMap();
 
-  document.body.classList.toggle("cursor", app.mode === "cursor");
+  app.active = settings?.toggle !== false;
+  app.mode = settings?.mode || "cur";
+
+  document.body.classList.toggle("cur", app.mode === "cur");
   label?.classList?.toggle("on", app.active);
 
   const handleMainQuestion = async (check = true) => {
     const { type, el } = detectType();
     if (!el) return;
 
-    const restore = app.active ? await getStorage("restore") : [];
     const question = extractMainQuestion();
-    const newEl = $("#mat-mdc-checkbox-4-input");
 
-    if (check && app.lastIdx === question.no) return;
-    app.lastIdx = question.no;
+    if (check && app.lastQuestion?.no === question.no) return;
+    app.lastQuestion = question;
+
+    const restore = app.active ? await getStorage("restore") : [];
+    const newEl = $("input[type=checkbox]");
+    const old = eventManager.get(newEl);
+
+    if (old) newEl?.removeEventListener("change", old);
+
+    const handleChange = async () => {
+      app.lastQuestion.is_new = newEl?.checked || false;
+      await sendData(app.lastQuestion);
+    };
+
+    newEl?.addEventListener("change", handleChange);
+    eventManager.set(newEl, handleChange);
 
     app.obsManager.forEach((obs) => obs.disconnect());
     app.obsManager = [];
@@ -43,17 +56,12 @@ import {
     question.type = type;
     handlers[type]?.({ el, question, restore, ...app });
 
-    newEl?.addEventListener("change", async () => {
-      question.is_new = newEl?.checked || false;
-      await sendData(question);
-    });
-
     clean(question);
-    log(question);
+    log("after clean", question);
     await sendData(question);
   };
 
   bindEvents(app, settings, handleMainQuestion, label);
-  setInterval(() => handleMainQuestion(), 800);
+  setInterval(() => handleMainQuestion(), 600);
   handleMainQuestion();
 })();

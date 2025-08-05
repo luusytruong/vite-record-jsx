@@ -51,14 +51,12 @@ export async function handleQuestion({
     if (text) answer.text = text;
     if (img?.src) answer.img_src = img.src;
 
-    const handleChange = () => {
+    input?.addEventListener("change", () => {
       if (isRadio) options.forEach((opt) => (opt.is_correct = false));
-      answer.is_correct = input.checked;
+      answer.is_correct = input.checked || false;
       group.classList.remove("vite-record");
       debounceSend();
-    };
-
-    input?.addEventListener("change", handleChange);
+    });
 
     const restored = restoredAnswers.find((r) => normalize(r.text) === text);
     if (restored && restored.is_correct && !input.checked) {
@@ -153,7 +151,6 @@ export function clean(question) {
     "drag_map",
     "img_src",
     "options",
-    "is_new",
     "text",
   ];
   keys.forEach((key) => {
@@ -227,29 +224,42 @@ export async function getStorage(key) {
 }
 
 export function bindEvents(app, settings, handleMainQuestion, label) {
-  document.addEventListener("keydown", async ({ ctrlKey, code }) => {
-    if (ctrlKey && code === "KeyC") {
-      const text = getSelection()?.toString();
-      if (text) navigator.clipboard.writeText(text).catch(console.error);
-    }
+  label?.addEventListener("click", async () => handleMainQuestion(false));
 
-    if (code === "ShiftRight") {
-      app.active = !app.active;
-      handleMainQuestion(false);
-      await setStorage("settings", { ...settings, toggle: app.active }).then(
-        (res) => log(res && app.active ? "on" : "off")
-      );
-      label?.classList?.toggle("on", app.active);
-    }
+  document.addEventListener(
+    "contextmenu",
+    (e) => e.stopImmediatePropagation(),
+    true
+  );
 
-    if (code === "Slash") {
-      app.mode = app.mode === "cursor" ? "color" : "cursor";
-      document.body.classList.toggle("cursor", app.mode === "cursor");
-      await setStorage("settings", { ...settings, mode: app.mode }).then(
-        (res) => log(res ? "mode changed" : "mode not changed")
-      );
-    }
-  });
+  document.addEventListener(
+    "keydown",
+    async (e) => {
+      const { ctrlKey, code } = e;
+      if (ctrlKey && code === "KeyC") {
+        const text = getSelection()?.toString();
+        if (text) navigator.clipboard.writeText(text).catch(console.error);
+      }
 
-  window.addEventListener("contextmenu", (e) => e.stopPropagation(), true);
+      if (code === "ShiftRight" || code === "") {
+        app.active = !app.active;
+        handleMainQuestion(false);
+        await setStorage("settings", { ...settings, toggle: app.active }).then(
+          (res) => log(res && app.active ? "on" : "off")
+        );
+        label?.classList?.toggle("on", app.active);
+      }
+
+      if (code === "Slash") {
+        app.mode = app.mode === "cur" ? "color" : "cur";
+        document.body.classList.toggle("cur", app.mode === "cur");
+        await setStorage("settings", { ...settings, mode: app.mode }).then(
+          (res) => log(res ? "mode changed" : "mode not changed")
+        );
+      }
+
+      e.stopImmediatePropagation();
+    },
+    true
+  );
 }

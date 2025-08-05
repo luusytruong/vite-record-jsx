@@ -3,7 +3,7 @@ import { $, extractNumber, getText } from "./utils.js";
 
 export function extractMainQuestion() {
   return {
-    is_new: $("#mat-mdc-checkbox-4-input")?.checked || false,
+    is_new: $("input[type=checkbox]")?.checked || false,
     no: extractNumber(getText($("fieldset legend"))),
     text: getText($("fieldset div")),
     img_src: $("fieldset img")?.src || "",

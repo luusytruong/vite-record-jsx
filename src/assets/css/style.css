@@ -46,7 +46,7 @@
     margin: 0 !important;
 }
 
-.cursor .vite-record {
+.cur .vite-record {
     color: inherit !important;
     cursor: grab !important;
     cursor: -webkit-grab !important;
@@ -66,9 +66,9 @@
 
 
 .vite-record {
-    color: #343dff !important;
+    color: #4050b5 !important;
 
     * {
-        color: #343dff !important;
+        color: #4050b5 !important;
     }
 }
