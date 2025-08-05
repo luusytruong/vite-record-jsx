@@ -19,6 +19,7 @@ const Question = ({ question }) => {
       <p className="text-lg">
         Question {question?.no}
         <span> ({question?.type})</span>
+        {question?.is_new && <span className="text-red-500 font-bold"> *</span>}
       </p>
       <p className="text-base line-clamp-1 mb-2" style={{ fontWeight: "bold" }}>
         {question?.text}

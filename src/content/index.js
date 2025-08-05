@@ -1,10 +1,18 @@
 import { extractMainQuestion } from "./core/extractHead.js";
 import { detectType } from "./core/detectType.js";
 import { handlers } from "./core/handlers/index.js";
-import { $, bindEvents, clean, getStorage, log, sendData } from "./core/utils.js";
+import {
+  $,
+  bindEvents,
+  clean,
+  getStorage,
+  log,
+  sendData,
+} from "./core/utils.js";
 
 (async () => {
-  const isLMS = location.hostname === "lms.ictu.edu.vn" || location.protocol === "file:";
+  const isLMS =
+    location.hostname === "lms.ictu.edu.vn" || location.protocol === "file:";
   if (!isLMS) return;
 
   console.clear();
@@ -24,6 +32,7 @@ import { $, bindEvents, clean, getStorage, log, sendData } from "./core/utils.js
 
     const restore = app.active ? await getStorage("restore") : [];
     const question = extractMainQuestion();
+    const newEl = $("#mat-mdc-checkbox-4-input");
 
     if (check && app.lastIdx === question.no) return;
     app.lastIdx = question.no;
@@ -33,6 +42,11 @@ import { $, bindEvents, clean, getStorage, log, sendData } from "./core/utils.js
 
     question.type = type;
     handlers[type]?.({ el, question, restore, ...app });
+
+    newEl?.addEventListener("change", async () => {
+      question.is_new = newEl?.checked || false;
+      await sendData(question);
+    });
 
     clean(question);
     log(question);

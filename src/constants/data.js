@@ -2,6 +2,7 @@ export const sampleQuestions = [
   {
     no: "1",
     text: "Theo Garlan và Shaw, thiết kế kiến trúc xác định điều gì?",
+    is_new: true,
     options: [
       {
         is_correct: true,
@@ -25,8 +26,7 @@ export const sampleQuestions = [
   {
     no: "2",
     text: "Cho biết đây là mô hình màu nào?",
-    img_src:
-      "https://images4.alphacoders.com/128/thumb-1920-1287807.jpg",
+    img_src: "https://images4.alphacoders.com/128/thumb-1920-1287807.jpg",
     options: [
       {
         is_correct: false,

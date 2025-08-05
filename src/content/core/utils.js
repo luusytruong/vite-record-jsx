@@ -153,6 +153,7 @@ export function clean(question) {
     "drag_map",
     "img_src",
     "options",
+    "is_new",
     "text",
   ];
   keys.forEach((key) => {
