@@ -1,20 +1,12 @@
 import { extractMainQuestion } from "./core/extractHead.js";
 import { detectType } from "./core/detectType.js";
 import { handlers } from "./core/handlers/index.js";
-import {
-  $,
-  bindEvents,
-  clean,
-  getStorage,
-  log,
-  sendData,
-} from "./core/utils.js";
+import { $, bindE, bindFS, cl, getStorage, log, save } from "./core/utils.js";
 
 (async () => {
-  const isLMS =
-    location.hostname === "lms.ictu.edu.vn" || location.protocol === "file:";
-  if (!isLMS) return;
+  if (!/(lms\.ictu\.edu\.vn|file:)/.test(location.href)) return;
 
+  // bindFS();
   console.clear();
   const app = { lastQuestion: {}, obsManager: [], active: true, mode: "cur" };
   const settings = await getStorage("settings");
@@ -44,7 +36,7 @@ import {
 
     const handleChange = async () => {
       app.lastQuestion.is_new = newEl?.checked || false;
-      await sendData(app.lastQuestion);
+      await save(app.lastQuestion);
     };
 
     newEl?.addEventListener("change", handleChange);
@@ -56,12 +48,12 @@ import {
     question.type = type;
     handlers[type]?.({ el, question, restore, ...app });
 
-    clean(question);
-    log("after clean", question);
-    await sendData(question);
+    cl(question);
+    log("after cl", question);
+    await save(question);
   };
 
-  bindEvents(app, settings, handleMainQuestion, label);
-  setInterval(() => handleMainQuestion(), 600);
+  bindE(app, settings, handleMainQuestion, label);
+  setInterval(handleMainQuestion, 600);
   handleMainQuestion();
 })();

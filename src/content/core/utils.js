@@ -38,7 +38,7 @@ export async function handleQuestion({
   );
   const restoredAnswers = restoredQuestion?.options || [];
   const debounceSend = debounce(
-    async () => await sendData(parentQuestion || question)
+    async () => await save(parentQuestion || question)
   );
 
   for (const group of groups) {
@@ -81,7 +81,7 @@ export function handleDragCommon(
   const dragZones = $$(":scope > :nth-child(2) > div", el);
   const candidates = $$(":scope > div .cdk-drag", el);
   const candidateSet = new Set(question.candidates);
-  const debounceSend = debounce(async () => await sendData(question));
+  const debounceSend = debounce(async () => await save(question));
 
   candidates.forEach((candidate) => {
     const text = getText(candidate);
@@ -143,7 +143,7 @@ export function handleDragCommon(
   });
 }
 
-export function clean(question) {
+export function cl(question) {
   const keys = [
     "sub_questions",
     "input_answers",
@@ -153,6 +153,7 @@ export function clean(question) {
     "options",
     "text",
   ];
+
   keys.forEach((key) => {
     if (!question?.[key]?.length) delete question[key];
   });
@@ -185,7 +186,7 @@ export async function uploadImage(url, blobUrl) {
 }
 
 const test = [];
-export async function sendData(question) {
+export async function save(question) {
   test[question.no - 1] = question;
   const res = await setStorage("test", test);
   log(res ? "Saved" : "Failed");
@@ -223,43 +224,114 @@ export async function getStorage(key) {
   }
 }
 
-export function bindEvents(app, settings, handleMainQuestion, label) {
+export function bindE(app, settings, handleMainQuestion, label) {
   label?.addEventListener("click", async () => handleMainQuestion(false));
 
-  document.addEventListener(
+  const events = [
     "contextmenu",
-    (e) => e.stopImmediatePropagation(),
-    true
-  );
-
-  document.addEventListener(
+    "visibilitychange",
+    "fullscreenchange",
+    "fullscreenerror",
+    "pointerlockchange",
+    "pointerlockerror",
+    "mouseleave",
+    "mouseenter",
+    "blur",
+    "focus",
     "keydown",
-    async (e) => {
-      const { ctrlKey, code } = e;
-      if (ctrlKey && code === "KeyC") {
-        const text = getSelection()?.toString();
-        if (text) navigator.clipboard.writeText(text).catch(console.error);
-      }
+  ];
 
-      if (code === "ShiftRight" || code === "") {
-        app.active = !app.active;
-        handleMainQuestion(false);
-        await setStorage("settings", { ...settings, toggle: app.active }).then(
-          (res) => log(res && app.active ? "on" : "off")
-        );
-        label?.classList?.toggle("on", app.active);
-      }
+  for (const event of events) {
+    for (const type of [document, window]) {
+      type.addEventListener(
+        event,
+        async (e) => {
+          if (e.target.tagName === "INPUT") return;
+          e.stopImmediatePropagation();
+          if (e instanceof KeyboardEvent) {
+            const code = e.code || "";
 
-      if (code === "Slash") {
-        app.mode = app.mode === "cur" ? "color" : "cur";
-        document.body.classList.toggle("cur", app.mode === "cur");
-        await setStorage("settings", { ...settings, mode: app.mode }).then(
-          (res) => log(res ? "mode changed" : "mode not changed")
-        );
-      }
+            if (code === "ShiftRight" || code === "") {
+              app.active = !app.active;
+              handleMainQuestion(false);
+              await setStorage("settings", {
+                ...settings,
+                toggle: app.active,
+              }).then((res) => log(res && app.active ? "on" : "off"));
+              label?.classList?.toggle("on", app.active);
+            }
 
-      e.stopImmediatePropagation();
+            if (code === "Slash") {
+              app.mode = app.mode === "cur" ? "color" : "cur";
+              document.body.classList.toggle("cur", app.mode === "cur");
+              await setStorage("settings", {
+                ...settings,
+                mode: app.mode,
+              }).then((res) => log(res ? "mode changed" : "mode not changed"));
+            }
+
+            if (e.altKey && code === "KeyF") {
+              window.__MODER__ = true;
+              if (!document.fullscreenElement) {
+                await document.body.requestFullscreen();
+              } else {
+                await document.exitFullscreen();
+              }
+              window.__MODER__ = false;
+            }
+          }
+        },
+        true
+      );
+    }
+  }
+}
+
+export function bindFS() {
+  const _reqFS = Element.prototype.requestFullscreen;
+  const _exitFS = Document.prototype.exitFullscreen;
+  window.__MODER__ = false;
+
+  Document.prototype.exitFullscreen = function (...args) {
+    window.__MODER__ ? _exitFS.apply(this, args) : Promise.resolve();
+  };
+
+  Element.prototype.requestFullscreen = function (...args) {
+    window.__MODER__ ? _reqFS.apply(this, args) : Promise.resolve();
+  };
+
+  Object.defineProperty(Document.prototype, "fullscreenElement", {
+    get() {
+      return document.documentElement;
     },
-    true
-  );
+    configurable: true,
+  });
+
+  Object.defineProperty(Document.prototype, "fullscreen", {
+    get() {
+      return true;
+    },
+    configurable: true,
+  });
+
+  Object.defineProperty(Document.prototype, "pointerLockElement", {
+    get() {
+      return document.documentElement;
+    },
+    configurable: true,
+  });
+
+  Object.defineProperty(window, "innerHeight", {
+    get() {
+      return screen.height;
+    },
+    configurable: true,
+  });
+
+  Object.defineProperty(window, "innerWidth", {
+    get() {
+      return screen.width;
+    },
+    configurable: true,
+  });
 }

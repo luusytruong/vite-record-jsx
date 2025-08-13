@@ -1,11 +1,11 @@
 // handlers/groupInput.js
-import { $$, getText, sendData, debounce, normalize } from "../utils.js";
+import { $$, getText, save, debounce, normalize } from "../utils.js";
 
 const eventManager = new WeakMap();
 export async function handleGroupInput({ el, question, restore }) {
   const labels = $$("label", el);
   const inputs = $$("input", el);
-  const debounceSend = debounce(async () => await sendData(question));
+  const debounceSend = debounce(async () => await save(question));
 
   const restoredQuestion = restore?.find(
     (q) => normalize(q?.text) === question.text && q?.type === question.type
